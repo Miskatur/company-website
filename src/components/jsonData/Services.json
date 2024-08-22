@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "icon1": "icon1.svg",
+        "icon1Dark": "target.png",
+        "thumb": "1-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+       "description": "Extensible web application development for specific business needs with powerful functionality to retain more clients or optimize internal processes.",
+        "title": "Web Application Development",
+        "serviceLink": "service"
+    },
+    {
+        "id": 2,
+        "icon1": "icon2.svg",
+        "icon1Dark": "envelope.png",
+        "thumb": "2-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+        "description": "Creating interactive, secure, and diverse mobile applications for a wide range of industries, fit for both Android and iOS platforms.",
+        "title": "Android & IOS App Development",
+        "serviceLink": "service"
+    },
+    {
+        "id": 3,
+        "icon1": "icon3.svg",
+        "icon1Dark": "analytics.png",
+        "thumb": "3-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+        "description": "Creating interactive, secure, and diverse mobile applications for a wide range of industries, fit for both Android and iOS platforms.",
+        "title": "Ecommerce Development",
+        "serviceLink": "service"
+    },
+    {
+        "id": 4,
+        "icon1": "icon4.svg",
+        "icon1Dark": "4.png",
+        "thumb": "4-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+        "description": "Creating interactive, secure, and diverse mobile applications for a wide range of industries, fit for both Android and iOS platforms.",
+        "title": "DevOps & Cloud Consulting",
+        "serviceLink": "service"
+    },
+    {
+        "id": 5,
+        "icon1": "icon5.svg",
+        "icon1Dark": "5.png",
+        "thumb": "5-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+        "description": "Creating interactive, secure, and diverse mobile applications for a wide range of industries, fit for both Android and iOS platforms.",
+        "title": "System Analysis & UX/UI Design",
+        "serviceLink": "service"
+    },
+    {
+        "id": 6,
+        "icon1": "icon6.svg",
+        "icon1Dark": "6.png",
+        "thumb": "6-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+        "description": "Creating interactive, secure, and diverse mobile applications for a wide range of industries, fit for both Android and iOS platforms.",
+       
+        "title": "Software Testing & QA Service",
+        "serviceLink": "service"
+    }
+]

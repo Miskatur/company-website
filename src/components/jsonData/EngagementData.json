@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "icon1": "1.png",
+        "icon1Dark": "target.png",
+        "thumb": "1-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+        "text":[
+            "Our dedicated development teams work for clients.",
+            "Teams managed by the client, assisted by Axilsoft project manager/ team lead.",
+            "There is full control over the management of the team.",
+            "The team is integrated with the client team and functions as their extended part.",
+            "Team sizes can be increased or decreased with prior notice.",
+            "The model is beneficial for any engagement lasting more than three months.",
+            "Cost-effective with high success rate for tech companies."
+        ],
+        "title": "Development Team",
+        "serviceLink": "services-details",
+        "description": "Our dedicated development teams work for clients. Teams managed by the client, assisted by Axilsoft project manager/ team lead."
+    },
+    {
+        "id": 2,
+        "icon1": "2.png",
+        "icon1Dark": "envelope.png",
+        "thumb": "2-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+        "text":[
+            "The project starts by deciding the fixed agreed-upon scope and price.",
+            "It critical to have the detailed requirements of the project at the start.",
+            "The engagement is usually time-boxed and hence accommodation of major change to the project is not straightforward.",
+            "This is applicable for small sized companies and very well-defined projects or prototyping."
+        ],
+        "title": "Fixed Price Model",
+        "serviceLink": "services-details",
+        "description": "Our dedicated development teams work for clients. Teams managed by the client, assisted by Axilsoft project manager/ team lead." 
+    },
+    {
+        "id": 3,
+        "icon1": "3.png",
+        "icon1Dark": "analytics.png",
+        "thumb": "3-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+        "text":[
+            "Service fulfillment is managed by Axilsoft team.",
+            "Axilsoft team decides on the time and resources based on requirements for project completion.",
+            "Team members may or may not be dedicated to the project.",
+            "The engagement is not time-boxed hence extensive detailed scoping of requirements is not needed before starting.",
+            "This model is good for non-tech companies that lack the means to manage an offsite team.",
+            "It may get be a bit costlier in comparison to the dedicated team model.",
+            "Project success depends on how well the expectations are conveyed to the tech team"
+        ],
+        "title": "Managed Services",
+        "serviceLink": "services-details",
+        "description": "Our dedicated development teams work for clients. Teams managed by the client, assisted by Axilsoft project manager/ team lead."   
+     },
+    {
+        "id": 4,
+        "icon1": "4.png",
+        "icon1Dark": "4.png",
+        "thumb": "4-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+       "text":[
+            "Our dedicated development teams work for clients.",
+            "Teams managed by the client, assisted by Axilsoft project manager/ team lead.",
+            "There is full control over the management of the team.",
+            "The team is integrated with the client team and functions as their extended part.",
+            "Team sizes can be increased or decreased with prior notice.",
+            "The model is beneficial for any engagement lasting more than three months.",
+            "Cost-effective with high success rate for tech companies."
+        ],
+        "title": "SEO Optimization",
+        "serviceLink": "services-details"
+    },
+    {
+        "id": 5,
+        "icon1": "5.png",
+        "icon1Dark": "5.png",
+        "thumb": "5-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+       "text":[
+            "Our dedicated development teams work for clients.",
+            "Teams managed by the client, assisted by Axilsoft project manager/ team lead.",
+            "There is full control over the management of the team.",
+            "The team is integrated with the client team and functions as their extended part.",
+            "Team sizes can be increased or decreased with prior notice.",
+            "The model is beneficial for any engagement lasting more than three months.",
+            "Cost-effective with high success rate for tech companies."
+        ],
+        "title": "PPC Advertising",
+        "serviceLink": "services-details"
+    },
+    {
+        "id": 6,
+        "icon1": "6.png",
+        "icon1Dark": "6.png",
+        "thumb": "6-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+       "text":[
+            "Our dedicated development teams work for clients.",
+            "Teams managed by the client, assisted by Axilsoft project manager/ team lead.",
+            "There is full control over the management of the team.",
+            "The team is integrated with the client team and functions as their extended part.",
+            "Team sizes can be increased or decreased with prior notice.",
+            "The model is beneficial for any engagement lasting more than three months.",
+            "Cost-effective with high success rate for tech companies."
+        ], 
+        "title": "Digital Marketing",
+        "serviceLink": "services-details"
+    }
+]
