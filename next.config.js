@@ -1,7 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-      domains: ['admin.axilsoft.com'],
+      remotePatterns: [
+        {
+          protocol: 'http',
+          hostname: 'admin.axilsoft.com',
+          port: '',
+          pathname: '/**',
+        },
+      ],
     },
     webpack(config, options) {
       // Add a rule for SVG files
