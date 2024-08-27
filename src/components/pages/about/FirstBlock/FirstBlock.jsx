@@ -29,10 +29,6 @@ const FirstBlock = ({ data, imageurl }) => {
                 alt="Image Not Found"
                 height={500}
                 width={500}
-                style={{
-                  height: "100%",
-                  width: "100%",
-                }}
               />
               {/* </div> */}
             </div>
