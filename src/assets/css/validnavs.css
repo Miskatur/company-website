@@ -1386,8 +1386,12 @@ nav.navbar.validnavs.brand-center {
 		text-align: left;
 		text-transform: capitalize;
 		width: 100%;
-		font-weight: 700 !important;
+		font-weight: 300 !important;
 		text-decoration: none;
+	}
+	nav.navbar.validnavs ul li.dropdown ul.dropdown-menu li a:hover{
+		font-weight: 500 !important;
+		color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1))
 	}
 
 	nav.navbar.validnavs ul.navbar-right li.dropdown.dropdown-left ul.dropdown-menu li a {
@@ -2571,6 +2575,7 @@ nav.navbar.validnavs.brand-center {
 		background-color: transparent;
 		border-radius: 34px;
 		border: 1px solid #3c73ff;
+		color: #3C73FF;
 	}
 	nav.navbar.attr-border-full ul.nav>li>a,
 	nav.navbar.brand-center ul.nav>li>a {

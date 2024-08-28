@@ -373,7 +373,7 @@ a,
 .btn,
 button {
 	-webkit-transition: all 0.35s ease-in-out;
-	transition: all 0.35s ease-in-out;
+	transition: all 0.15s ease-in-out;
 	outline: medium none;
 	text-decoration: none;
 	font-weight: 800;
@@ -10389,7 +10389,11 @@ body.bg-dark .megamenu-content .title {
 
 @media (min-width: 1024px) {
 	nav.navbar.validnavs li.dropdown ul.dropdown-menu {
-		width: 300px;
+		width: 280px;
+		padding: 20px 10px;
+	}
+	nav.navbar.validnavs li.dropdown ul.dropdown-menu.company-menu {
+		width: 170px;
 		padding: 20px 10px;
 	}
 }
