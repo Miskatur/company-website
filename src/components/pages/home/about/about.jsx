@@ -20,7 +20,9 @@ const About = ({ data, imageurl }) => {
 
 
   return (
-    <div className="about-style-one-area ">
+    <div className="about-style-one-area "     style={{
+      paddingBottom: "140px",
+    }}>
       <div className="container">
         <div className="row">
           <div className="col-xl-4 col-lg-12">
