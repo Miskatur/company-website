@@ -9,11 +9,6 @@ import { useAboutDataQuery } from "@/features/aboutpage";
 import Preloader from "@/components/shared/Loader/Preloader";
 
 
-
-
-
-
-
 const About = () => {
 
   const { data, isLoading, isFetching } = useAboutDataQuery();
