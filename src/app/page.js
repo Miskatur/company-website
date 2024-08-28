@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { Suspense } from 'react';
 import Banner from "@/components/pages/home/banner/banner";
 import Engagements from '@/components/pages/home/engagements/engagements';
 import Services from '@/components/pages/home/services/services';
@@ -19,7 +19,7 @@ const Home = () => {
       {isLoading || isFetching ? (
         <Preloader isLoading={isLoading || isFetching} />
       ) : (
-        <>
+        <Suspense fallback={<>Loading..</>}>
           <Banner data={pageData} imageurl={baseUrl} />
           <Services />
           <Engagements />
@@ -29,7 +29,7 @@ const Home = () => {
           {/* <Project /> */}
           {/* <WhyChooseUsV1 chooseClass="bg-gray" /> */}
           {/* <Team /> */}
-        </>
+        </Suspense>
       )}
     </div>
   );

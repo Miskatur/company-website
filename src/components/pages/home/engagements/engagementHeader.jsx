@@ -11,7 +11,7 @@ const EngagementHeader = ({ data }) => {
     <div
       className="box-layout container engagement"
       style={{
-        paddingBottom: "120px",
+        paddingBottom: "80px",
       }}
     >
       <h1 className="engagement_title ">{third_section_title}</h1>

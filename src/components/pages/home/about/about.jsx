@@ -20,7 +20,7 @@ const About = ({ data, imageurl }) => {
 
 
   return (
-    <div className="about-style-one-area default-padding">
+    <div className="about-style-one-area ">
       <div className="container">
         <div className="row">
           <div className="col-xl-4 col-lg-12">

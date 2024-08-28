@@ -12,7 +12,7 @@ const TechnologiesHeader = ({data}) => {
     <div
       className="box-layout container engagement"
       style={{
-        paddingBottom: "80px",
+        paddingBottom: "40px",
       }}
     >
       <h1 className="engagement_title ">{fourth_section_title}</h1>

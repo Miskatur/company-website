@@ -4,7 +4,7 @@ import Link from "next/link";
 const Banner = ({ data, imageurl }) => {
   const {
     first_section_title = "IT Services & Resource Augmentation Partner",
-    first_section_description = "Comprehensive offshore Agile software development services and your dedicated partner in crafting high-quality bespoke software solutions",
+    first_section_description = "Comprehensive offshore Agile software development services and your dedicated partner in crafting high-quality bespoke software solutions",
     first_section_button_text = "Let’s Start Something Amazing!",
     first_section_image_path
   } = data || {};

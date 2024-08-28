@@ -8,6 +8,9 @@ const nextConfig = {
           port: '',
           pathname: '/**',
         },
+        {
+          hostname : "localhost"
+        }
       ],
     },
     webpack(config, options) {

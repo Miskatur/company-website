@@ -17,9 +17,9 @@ const Services = () => {
     <div className="global-padding">
       <ServiceHeader data={pageData} />
       <div className="box-layout overflow-hidden bottom-less service-padding">
-        <div className="row p-3 p-lg-5 p-xl-4">
+        <div className="row px-3 px-lg-5 px-xl-4">
           {servicesToRender.map((service, index) => (
-            <div key={index} className="col-xl-4 col-lg-6 col-md-6 mb-30">
+            <div key={index} className="col-xl-4 col-lg-6 col-md-6 mb-60">
               <SingleService service={service} imageurl={baseUrl} />
             </div>
           ))}

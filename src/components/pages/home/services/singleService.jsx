@@ -3,22 +3,22 @@ import Link from "next/link";
 import React from "react";
 
 const SingleService = ({ service, imageurl }) => {
+  const { title, description, file_path, id, serviceLink, icon1, uid } =
+    service;
 
-  const { title, description, file_path, id, serviceLink, icon1, uid } = service;
+  const imagePath =
+    !service || Object.keys(service).length === 0 || !file_path
+      ? `/img/icon/${icon1}  `
+      : `${imageurl}${file_path}`;
 
- const imagePath = !service || Object.keys(service).length === 0 || !file_path
-    ? `/img/icon/${icon1}  `
-    : `${imageurl}${file_path}`; 
-
-
-
-
-  
   return (
     <div className="singleService position-relative">
       <Image src={imagePath} width={80} height={80} alt="Icon" />
       <h4>{title}</h4>
-      <p className="limited-para" dangerouslySetInnerHTML={{ __html: description }} />
+      <p
+        className="limited-para"
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
       {/* {description} */}
 
       <div className="absolute-bottom">

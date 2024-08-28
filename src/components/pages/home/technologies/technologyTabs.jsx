@@ -27,7 +27,7 @@ export default function TechnologyTabs({ techlist }) {
       </ul>
       <div className="technologies row justify-content-center">
         {techlist[activeTab]?.map((tech, index) => (
-          <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-2 mb-5" key={`${tech.name}-${index}`}>
+          <div className="col-6 col-sm-4 col-md-4 col-lg-3 col-xl-2 mb-2" key={`${tech.name}-${index}`}>
             <div className="tech-item p-0">
               <Image src={tech.img} alt={tech.name} height={160} width={160} />
             </div>

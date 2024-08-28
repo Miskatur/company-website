@@ -3,17 +3,16 @@ import TechnologyTabs from "./technologyTabs";
 import TechnologiesHeader from "./technologiesHeader";
 import { useHomepageDataQuery } from "@/features/homepage";
 
-
 const transformTechnologyData = (technologyList, baseUrl) => {
   const result = {};
 
-  technologyList.forEach(tech => {
+  technologyList.forEach((tech) => {
     const category = tech.name; // Assuming `name` is the category
     if (!result[category]) {
       result[category] = [];
     }
-    
-    tech.technology_components.forEach(component => {
+
+    tech.technology_components.forEach((component) => {
       result[category].push({
         name: component.name,
         img: `${baseUrl}${component.file_path}`, // Use baseUrl for the correct image path
@@ -30,9 +29,12 @@ const Technologies = () => {
   const technologyList = data?.data?.technology_list || [];
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  
+
   // Transform the technology data
-  const transformedTechnologyData = transformTechnologyData(technologyList, baseUrl);
+  const transformedTechnologyData = transformTechnologyData(
+    technologyList,
+    baseUrl
+  );
 
   return (
     <div
@@ -48,4 +50,3 @@ const Technologies = () => {
 };
 
 export default Technologies;
-

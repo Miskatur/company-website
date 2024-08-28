@@ -23,25 +23,25 @@ const Engagements = () => {
     <div className="custom-engagement-padding">
       <EngagementHeader data={pageData}/>
       <div
-        className=" overflow-hidden bottom-less  bg-gray bg-cover mx-1 mx-lg-0"
+        className=" overflow-hidden  bg-gray bg-cover mx-1 mx-lg-0"
         style={{
           backgroundImage: "url(/img/shape/banner-2.svg)",
           borderRadius: "32px",
         }}
       >
         <div className="engagement-padding ">
-          <div className="row mx-lg-4 my-lg-4 mx-xl-1 my-xl-1 mx-1 my-4">
-            {engagementsToRender.slice(0, 3).map((engagement) => (
+          <div className="row mx-lg-4 my-lg-2 mx-xl-1 my-xl-1 mx-1 my-4 gap-5 gap-md-0">
+            {engagementsToRender?.slice(0, 3)?.map((engagement) => (
               <div
-                className="col-xl-4 col-lg-6 col-md-6 mb-30"
-                key={engagement.id}
+                className="col-xl-4 col-lg-6 col-md-6 "
+                key={engagement?.id}
               >
                 <SingleEngagement engagement={engagement} imageurl={baseUrl}/>
               </div>
             ))}
           </div>
           <div className="d-flex justify-content-center">
-            <div className="view-all-div mb-4 mb-xl-0 mt-xl-5">
+            <div className="view-all-div mb-4 mb-lg-0 mt-lg-4 mt-xl-5">
               <Link href={`/solutions`} className="view-all-btn">
                 View All
               </Link>

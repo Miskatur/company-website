@@ -121,13 +121,15 @@ body {
         width: 85%;
         margin: 0 auto;
     }
-
+    .services-style-one {
+        min-height: 560px;
+    }
     .engagement-padding {
-        padding: 80px 70px;
+        padding: 40px 20px;
     }
 
     .services-style-one h4 {
-        font-size: 32px;
+        font-size: 24px;
         font-weight: 500;
         color: #3D424C;
     }
@@ -149,14 +151,33 @@ body {
     }
 }
 
+@media (min-width: 1400px) {
+    .services-style-one {
+        min-height: 540px;
+    }
+    .engagement-padding {
+        padding: 80px 80px;
+    }
+    a.view-all-btn {
+        font-weight: 300;
+        font-size: 24px !important;
+        color: #ffffff;
+    }
+    .engagement-padding div.view-all-div {
+        border: 1px solid #ffffff;
+        padding: 16px 35px;
+        border-radius: 4px;
+        display: inline;
+    }
+}
 @media (min-width: 1200px) {
     .engagement_subText {
         font-size: 20px;
         font-weight: 400;
-        line-height: 36px;
+        line-height: 150%;
         text-align: center;
     }
-
+   
     .engagement_title {
         font-size: 56px;
         font-weight: 600;
@@ -165,9 +186,11 @@ body {
         width: 85%;
         margin: 0 auto;
     }
-
+    .services-style-one {
+        min-height: 600px;
+    }
     .engagement {
-        padding-bottom: 40px;
+        padding-bottom: 0px;
     }
 
     .singleService h4 {
@@ -187,23 +210,30 @@ body {
     }
 
     .service-padding {
-        padding-top: 80px;
-        padding-bottom: 120px;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
     }
 
     .global-padding {
         padding-left: 80px;
         padding-right: 80px
     }
+
 }
 
 @media (min-width: 1600px) {
-
+    a.view-all-btn {
+        font-weight: 300;
+        font-size: 24px;
+        color: #ffffff;
+    }
     .global-padding {
         padding-left: 140px;
         padding-right: 140px
     }
-
+    .engagement-padding {
+        padding: 80px 80px;
+    }
     .engagement_title {
         font-size: 64px;
         font-weight: 600;
@@ -214,10 +244,10 @@ body {
 
     .singleService h4 {
         padding-top: 16px;
-        font-size: 28px;
+        font-size: 24px;
         color: #484848CC;
         font-weight: 700;
-        line-height: 42px;
+        line-height: 150%;
     }
 
     .singleService p {
@@ -678,10 +708,10 @@ a.view-all-btn:hover {
 
     .singleService h4 {
         padding-top: 16px;
-        font-size: 24px;
+        font-size: 20px;
         color: #484848CC;
         font-weight: 700;
-        line-height: 42px;
+        line-height: 150%;
     }
 
     .singleService p {
@@ -725,7 +755,7 @@ a.view-all-btn:hover {
 
 /* tabs  */
 .tabs-container {
-    margin: 20px;
+    /* margin: 20px; */
     gap: 10px;
     cursor: pointer;
 }
@@ -766,7 +796,7 @@ a.view-all-btn:hover {
     display: flex;
     flex-wrap: wrap;
     margin-top: 40px !important;
-    gap: 5px;
+    /* gap: 5px; */
 }
 
 .tech-item {
@@ -831,6 +861,18 @@ a.view-all-btn:hover {
         margin-top: 20px;
 
     }
+    .engagement-padding div.view-all-div {
+        border: 1px solid #ffffff;
+        padding: 12px 24px;
+        border-radius: 4px;
+        display: inline;
+
+    }
+    a.view-all-btn {
+        font-weight: 300;
+        font-size: 20px;
+        color: #ffffff;
+    }
 }
 
 @media (min-width: 1600px) {
@@ -844,6 +886,22 @@ a.view-all-btn:hover {
         width: 160px;
         height: 160px;
         place-content: center;
+    }
+
+    .services-style-one {
+        min-height: 550px;
+    }
+    .services-style-one h4 {
+        font-size: 28px;
+        font-weight: 500;
+        color: #3D424C;
+    }
+
+    .services-style-one p {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 150%;
+        color: #505050;
     }
 
 }
@@ -1207,7 +1265,7 @@ a.view-all-btn:hover {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 6;
     /* Limit the text to 3 lines */
     -webkit-box-orient: vertical;
     line-height: 1.5;
@@ -1220,12 +1278,12 @@ a.view-all-btn:hover {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    /* -webkit-line-clamp: 5; */
     /* Limit the text to 3 lines */
     -webkit-box-orient: vertical;
     line-height: 1.5;
     /* Adjust based on your needs */
-    max-height: 5em;
+    /* max-height: 5em; */
     max-lines: 2;
 }
 
