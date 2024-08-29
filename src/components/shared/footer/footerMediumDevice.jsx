@@ -2,15 +2,27 @@ import React from "react";
 import Link from "next/link";
 import logo from "../../../../public/img/logo/logo.svg";
 import Image from "next/image";
+import whatsapp from '../../../../public/img/axil-custom/whatsapp.svg'
+import facebook from '../../../../public/img/axil-custom/facebook.svg'
+import telegram from '../../../../public/img/axil-custom/share.svg'
+import linkedin from '../../../../public/img/axil-custom/linkedin.svg'
 
 
-const FooterMediumDevice = ({ socialMediaLinks, services, solutions, businessSettings, imagePath }) => {
-
-  const contactPhone = businessSettings.company_primary_phone || "+880123456789";
-  const contactPhonesecondary = businessSettings.company_secondary_phone || "+880123456789";
+const FooterMediumDevice = ({
+  socialMediaLinks,
+  services,
+  solutions,
+  businessSettings,
+  imagePath,
+}) => {
+  const contactPhone =
+    businessSettings.company_primary_phone || "+880123456789";
+  const contactPhonesecondary =
+    businessSettings.company_secondary_phone || "+880123456789";
   const contactEmail = businessSettings.company_email || "companyemail.com";
-  const contactAddress = businessSettings.company_address || "4517 Washington Ave, Manchester, Kentucky 39495";
-
+  const contactAddress =
+    businessSettings.company_address ||
+    "4517 Washington Ave, Manchester, Kentucky 39495";
 
   return (
     <>
@@ -25,16 +37,16 @@ const FooterMediumDevice = ({ socialMediaLinks, services, solutions, businessSet
             <div className="row">
               <div className="default-padding-bottom col-md-6 footer-item mt-50">
                 <div className="f-item newsletter">
-                  <Image src={imagePath} height={66} width={199} />
+                  <Image className="footer-logo" src={imagePath} height={66} width={199} />
                   <p className="get-in-touch" style={{ color: "#3D424C" }}>
                     Get in Touch
                   </p>
                   <p className="all-subtitle mt-30 mb-1">{contactPhone}</p>
-                  <p className="all-subtitle m-0 mb-4">{contactPhonesecondary}</p>
-                  <p className="all-subtitle m">Email - {contactEmail}</p>
-                  <p className="all-subtitle m-0">
-                    {contactAddress}
+                  <p className="all-subtitle m-0 mb-4">
+                    {contactPhonesecondary}
                   </p>
+                  <p className="all-subtitle m">Email - {contactEmail}</p>
+                  <p className="all-subtitle m-0">{contactAddress}</p>
                 </div>
               </div>
 
@@ -107,7 +119,11 @@ const FooterMediumDevice = ({ socialMediaLinks, services, solutions, businessSet
                     {services.slice(0, 10).length > 0 ? (
                       services.map((service) => (
                         <li key={service.id}>
-                          <Link href={`/service/${service.uid}`} className="text-decoration-none p-0" style={{ color: "rgba(255, 255, 255, 0.7)" }}>
+                          <Link
+                            href={`/service/${service.uid}`}
+                            className="text-decoration-none p-0"
+                            style={{ color: "rgba(255, 255, 255, 0.7)" }}
+                          >
                             {service.title}
                           </Link>
                         </li>
@@ -169,7 +185,6 @@ const FooterMediumDevice = ({ socialMediaLinks, services, solutions, businessSet
                           </Link>
                         </li>
                       </>
-
                     )}
                   </ul>
                 </div>
@@ -182,7 +197,11 @@ const FooterMediumDevice = ({ socialMediaLinks, services, solutions, businessSet
                     {solutions.slice(0, 10).length > 0 ? (
                       solutions.map((solution) => (
                         <li key={solution.id}>
-                          <Link href={`/solutions/${solution.uid}`} className="text-decoration-none p-0" style={{ color: "rgba(255, 255, 255, 0.7)" }}>
+                          <Link
+                            href={`/solutions/${solution.uid}`}
+                            className="text-decoration-none p-0"
+                            style={{ color: "rgba(255, 255, 255, 0.7)" }}
+                          >
                             {solution.title}
                           </Link>
                         </li>
@@ -278,7 +297,7 @@ const FooterMediumDevice = ({ socialMediaLinks, services, solutions, businessSet
             </div>
           </div>
         </div>
-        <div className="social-padding  d-block d-xxl-none">
+        <div className="footer-block   d-block d-xxl-none">
           <p className="get-in-touch mt-20" style={{ color: "#3D424C" }}>
             Social Link
           </p>
@@ -292,98 +311,80 @@ const FooterMediumDevice = ({ socialMediaLinks, services, solutions, businessSet
                 <Image
                   width={48}
                   height={48}
-                  src="./img/axil-custom/share.svg"
+                  src={telegram}
                   alt="Telegram"
                 />
               </Link>
-            )
-              :
-              (
-                <Link href='#'>
-                  <Image
-                    width={48}
-                    height={48}
-                    src="./img/axil-custom/share.svg"
-                    alt="Telegram"
-                  />
-                </Link>
-              )
-
-            }
+            ) : (
+              <Link href="#">
+                <Image
+                  width={48}
+                  height={48}
+                  src={telegram}
+                  alt="Telegram"
+                />
+              </Link>
+            )}
 
             {socialMediaLinks.facebook ? (
               <Link href={socialMediaLinks.telegram}>
                 <Image
                   width={48}
                   height={48}
-                  src="./img/axil-custom/facebook.svg"
+                  src={facebook}
                   alt="Facebook"
                 />
               </Link>
-            )
-
-              :
-              (
-                <Link href='#'>
-                  <Image
-                    width={48}
-                    height={48}
-                    src="./img/axil-custom/facebook.svg"
-                    alt="Facebook"
-                  />
-                </Link>
-              )
-            }
+            ) : (
+              <Link href="#">
+                <Image
+                  width={48}
+                  height={48}
+                  src={facebook}
+                  alt="Facebook"
+                />
+              </Link>
+            )}
 
             {socialMediaLinks.linkedin ? (
               <Link href={socialMediaLinks.telegram}>
                 <Image
                   width={48}
                   height={48}
-                  src="./img/axil-custom/linkedin.svg"
+                  src={linkedin}
                   alt="LinkedIn"
                 />
               </Link>
-            )
-              :
-              (
-                <Link href='#'>
-                  <Image
-                    width={48}
-                    height={48}
-                    src="./img/axil-custom/linkedin.svg"
-                    alt="LinkedIn"
-                  />
-                </Link>
-              )
-            }
+            ) : (
+              <Link href="#">
+                <Image
+                  width={48}
+                  height={48}
+                  src={linkedin}
+                  alt="LinkedIn"
+                />
+              </Link>
+            )}
 
             {socialMediaLinks.whatsapp ? (
               <Link href={socialMediaLinks.telegram}>
                 <Image
                   width={48}
                   height={48}
-                  src="./img/axil-custom/whatsapp.svg"
+                  src={whatsapp}
                   alt="WhatsApp"
                 />
               </Link>
-            )
-              :
-              (
-                <Link href='#'>
-                  <Image
-                    width={48}
-                    height={48}
-                    src="./img/axil-custom/whatsapp.svg"
-                    alt="WhatsApp"
-                  />
-                </Link>
-              )
-            }
-
-
-
-
+            ) : (
+              <Link href="#">
+                <Image
+                  width={48}
+                  height={48}
+                  src={whatsapp}
+                  alt="WhatsApp"
+                />
+              </Link>
+            )}
           </div>
         </div>
       </footer>
