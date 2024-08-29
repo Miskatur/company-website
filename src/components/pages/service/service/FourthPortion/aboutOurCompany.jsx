@@ -31,7 +31,7 @@ const AboutOurCompany = ({
           <div className="why-choose-pic-portion col-lg-6 order-1 order-lg-2 order-xl-1 pe-lg-5">
             <Image
               className="idea-image"
-              src={imageUrl + about_company_image_path}
+              src={`http://localhost/company-website-backend/storage/app/public${about_company_image_path}`}
               alt="Idea Illustration"
               width={500}
               height={500}

@@ -60,7 +60,7 @@ const WhyChoseUs = ({
             ) : (
               <Image
                 className="idea-image mr-5"
-                src={pic}
+                src={"/img/axil-custom/2.png"}
                 alt="Idea Illustration"
                 width={500}
                 height={600}
