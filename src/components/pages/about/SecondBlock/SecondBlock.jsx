@@ -1,6 +1,6 @@
 import React from "react";
 import Pic from "../../../../../public/img/axil-custom/2.svg";
-import Passion from "../../../../../public/img/axil-custom/passion.svg";
+import passion from "../../../../../public/img/axil-custom/passion.svg";
 import Image from "next/image";
 
 const SecondBlock = ({ data, imageurl, pic = Pic }) => {
@@ -82,7 +82,7 @@ const SecondBlock = ({ data, imageurl, pic = Pic }) => {
             <div>
               <Image
                 className="passion-signature border-black position-absolute"
-                src={Passion}
+                src={"/img/axil-custom/passion.svg"}
                 alt="Passion Signature"
                 height={600}
                 width={600}

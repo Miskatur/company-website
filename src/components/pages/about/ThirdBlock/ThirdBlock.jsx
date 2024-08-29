@@ -1,21 +1,19 @@
 import React from "react";
 import Pic from "../../../../../public/img/axil-custom/3.svg";
-import Passion from "../../../../../public/img/axil-custom/our-story.svg";
+import ourStory from "../../../../../public/img/axil-custom/our-story.svg";
 import Image from "next/image";
 
-const ThirdBlock = ({data, imageurl, pic=Pic}) => {
-
+const ThirdBlock = ({ data, imageurl, pic = Pic }) => {
   const {
     about_third_section_title = "Dreamers to create an Impact",
     about_third_section_description = "Everybody dreams of being a part of something big but falls short in investing the time and passion required to build it. We have taken this ideology to heart - and it is reflected in our work. The harmony flows through us, fuels our ambitions, and our very way of life. It lets us break barriers set by others and achieve something that is far greater. We work tirelessly not because we want to make a name for ourselves but rather to leave a positive impact on mankind. This is who we are. We are #TeamAxilweb.",
-    about_third_section_image_path
+    about_third_section_image_path,
   } = data || {};
 
-
-  const imagePath = !data || Object.keys(data).length === 0 || !about_third_section_image_path
-    ? pic  
-    : `${imageurl}${about_third_section_image_path}`;
-
+  const imagePath =
+    !data || Object.keys(data).length === 0 || !about_third_section_image_path
+      ? pic
+      : `${imageurl}${about_third_section_image_path}`;
 
   return (
     <div
@@ -53,9 +51,13 @@ const ThirdBlock = ({data, imageurl, pic=Pic}) => {
             <h2 className="why-choose-main-heading">
               {about_third_section_title}
             </h2>
-          
 
-            <p className="why-choose-content" dangerouslySetInnerHTML={{ __html: about_third_section_description }} />
+            <p
+              className="why-choose-content"
+              dangerouslySetInnerHTML={{
+                __html: about_third_section_description,
+              }}
+            />
 
             <div
               style={{ display: "flex", alignItems: "center", width: "100%" }}
@@ -80,7 +82,7 @@ const ThirdBlock = ({data, imageurl, pic=Pic}) => {
             <div>
               <Image
                 className="passion-signature"
-                src={Passion}
+                src={"/img/axil-custom/our-story.svg"}
                 alt="Our Story Signature"
                 height={700}
                 width={800}
@@ -91,7 +93,7 @@ const ThirdBlock = ({data, imageurl, pic=Pic}) => {
                   zIndex: 0,
                   left: "-43%",
                   bottom: "0%",
-                  objectFit: "-moz-initial"
+                  objectFit: "-moz-initial",
                 }}
               />
 
