@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains:
-      ['localhost', 'axilwebsite-frontend.vercel.app', 'company-website-frontend-liart.vercel.app/', 'http://localhost'],
+    // domains:
+    //   ['localhost', 'axilwebsite-frontend.vercel.app', 'company-website-frontend-liart.vercel.app/', 'http://localhost'],
     remotePatterns: [
       {
         hostname: "company-website-one-theta.vercel.app"
