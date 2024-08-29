@@ -81,22 +81,24 @@ const ThirdBlock = ({data, imageurl, pic=Pic}) => {
               <Image
                 className="passion-signature"
                 src={Passion}
-                alt="Idea Illustration"
-                // height={572}
+                alt="Our Story Signature"
+                height={700}
+                width={800}
                 style={{
                   position: "absolute",
-                  height: "120%",
-                  width: "100%",
-                  zIndex: 2,
+                  // height: "120%",
+                  // width: "100%",
+                  zIndex: 0,
                   left: "-43%",
                   bottom: "0%",
+                  objectFit: "-moz-initial"
                 }}
               />
 
               <Image
                 className="idea-image"
                 src={imagePath}
-                alt="Idea Illustration"
+                alt="Our Story Image"
                 height={600}
                 width={900}
                 style={{ zIndex: 1, height: "100%", width: "100%" }}

@@ -1315,11 +1315,9 @@ a.view-all-btn:hover {
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 6;
-    /* Limit the text to 3 lines */
     -webkit-box-orient: vertical;
     line-height: 1.5;
-    /* Adjust based on your needs */
-    /* Adjust based on your line-height and -webkit-line-clamp */
+
 }
 
 

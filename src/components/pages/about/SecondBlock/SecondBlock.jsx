@@ -3,19 +3,17 @@ import Pic from "../../../../../public/img/axil-custom/2.svg";
 import Passion from "../../../../../public/img/axil-custom/passion.svg";
 import Image from "next/image";
 
-const SecondBlock = ({data, imageurl, pic=Pic}) => {
-
+const SecondBlock = ({ data, imageurl, pic = Pic }) => {
   const {
     about_second_section_title = "We are Passionate to make a change",
     about_second_section_description = "Only skill is not enough to excel; passion is essential. We are as skilled as we are passionate about what we do—software development. Creating custom software solutions is not just a task for us; it’s a way of life, nourishing our thirst for seeking out opportunities to develop ourselves. Our enthusiasm for IT and business extends into our leisure time as well. We actively discuss the latest technology with our peers and stay updated on all the latest business automation news.",
-    about_second_section_image_path
+    about_second_section_image_path,
   } = data || {};
 
-
-  const imagePath = !data || Object.keys(data).length === 0 || !about_second_section_image_path
-    ? pic  
-    : `${imageurl}${about_second_section_image_path}`;
-
+  const imagePath =
+    !data || Object.keys(data).length === 0 || !about_second_section_image_path
+      ? pic
+      : `${imageurl}${about_second_section_image_path}`;
 
   return (
     <div
@@ -53,8 +51,13 @@ const SecondBlock = ({data, imageurl, pic=Pic}) => {
             <h2 className="why-choose-main-heading">
               {about_second_section_title}
             </h2>
-            
-            <p className="why-choose-content" dangerouslySetInnerHTML={{ __html: about_second_section_description }} />
+
+            <p
+              className="why-choose-content"
+              dangerouslySetInnerHTML={{
+                __html: about_second_section_description,
+              }}
+            />
 
             <div
               style={{ display: "flex", alignItems: "center", width: "100%" }}
@@ -75,17 +78,17 @@ const SecondBlock = ({data, imageurl, pic=Pic}) => {
             </div>
           </div>
 
-          <div className="why-choose-pic-portion col-lg-6 order-1 order-lg-2 order-xl-2 ps-lg-5 " >
-            <div >
+          <div className="why-choose-pic-portion col-lg-6 order-1 order-lg-2 order-xl-2 ps-lg-5 ">
+            <div>
               <Image
-                className="passion-signature border-black"
+                className="passion-signature border-black position-absolute"
                 src={Passion}
-                alt="Idea Illustration"
+                alt="Passion Signature"
                 height={600}
+                width={600}
                 style={{
-                  position: "absolute",
                   left: "5.5%",
-                  zIndex: 2,
+                  zIndex: 0,
                   height: "82%",
                   width: "100%",
                 }}
