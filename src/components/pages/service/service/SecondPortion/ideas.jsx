@@ -2,12 +2,19 @@ import React from "react";
 import Pic from "../../../../../../public/img/axil-custom/1.png";
 import Image from "next/image";
 
-const Ideas = ({ data = {}, ideaPic = Pic, ideaText, ideaHeading, imageUrl }) => {
+const Ideas = ({
+  data = {},
+  ideaPic = Pic,
+  ideaText,
+  ideaHeading,
+  imageUrl,
+}) => {
   const { file_path } = data;
 
-  const imagePath = !data || Object.keys(data).length === 0 || !file_path
-    ? ideaPic
-    : `${imageUrl}${file_path}`;
+  const imagePath =
+    !data || Object.keys(data).length === 0 || !file_path
+      ? ideaPic
+      : `${imageUrl}${file_path}`;
 
   return (
     <div
@@ -28,7 +35,10 @@ const Ideas = ({ data = {}, ideaPic = Pic, ideaText, ideaHeading, imageUrl }) =>
           </div>
           <div className="idea-text-portion col-lg-6  d-flex flex-column align-items-start justify-content-center mt-4 mt-xl-0 ps-lg-5">
             <h2 className="main-heading ">{ideaHeading}</h2>
-            <p className="idea-content" dangerouslySetInnerHTML={{ __html: ideaText }} />
+            <p
+              className="idea-content"
+              dangerouslySetInnerHTML={{ __html: ideaText }}
+            />
 
             <button
               className="contact-now"
