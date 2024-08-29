@@ -17,7 +17,7 @@ const WhyChoseUs = ({
     !data || Object.keys(data).length === 0 || !choose_us_image_path
       ? pic
       : `${imageUrl}${choose_us_image_path}`;
-  // console.log("imagePath", imagePath);
+  console.log("imagePath", imagePath);
 
   return (
     <div
@@ -45,31 +45,17 @@ const WhyChoseUs = ({
           </div>
 
           <div className="why-choose-pic-portion col-lg-6 order-1 order-lg-2 order-xl-2 d-flex justify-content-xl-start ps-lg-5">
-            {choose_us_image_path ? (
-              <Image
-                className="idea-image mr-5"
-                src={`${imageUrl}${choose_us_image_path}`}
-                alt="Idea Illustration"
-                width={500}
-                height={600}
-                style={{
-                  height: "100%",
-                  width: "100%",
-                }}
-              />
-            ) : (
-              <Image
-                className="idea-image mr-5"
-                src={"/img/axil-custom/2.png"}
-                alt="Idea Illustration"
-                width={500}
-                height={600}
-                style={{
-                  height: "100%",
-                  width: "100%",
-                }}
-              />
-            )}
+            <Image
+              className="idea-image mr-5"
+              src={imagePath}
+              alt="Idea Illustration"
+              width={500}
+              height={600}
+              style={{
+                height: "100%",
+                width: "100%",
+              }}
+            />
           </div>
         </div>
       </div>

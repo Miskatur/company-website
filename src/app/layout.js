@@ -39,24 +39,7 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    // url: "https://royalshuttlebelize.com",
-    title: "Axilsoft Limited",
-    type: 'website',
-    description:
-      "Axilsoft Limited is one of the fastest growing digital technology platforms.",
-    siteName: "axilsoft-limited",
-    images: [
-      {
-        url: "/img/logo/logo.svg",
-        width: 1200,
-        height: 630,
-        alt: "Axilsoft Limited",
-      },
-    ],
-  },
+
   keywords: [
 
   ],
