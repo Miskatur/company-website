@@ -100,6 +100,17 @@ body {
         padding-left: 40px;
         padding-right: 40px
     }
+    .read_more_about{
+        bottom: 20px;
+        right: 20px;
+        color: white;
+        border: 1px solid white !important;
+        padding: 10px;
+        border-radius: 8px;
+        z-index: 100;
+        font-size: 20px;
+       font-weight: 400;
+      }
 }
 
 @media (min-width: 992px) {
@@ -218,6 +229,18 @@ body {
         padding-left: 80px;
         padding-right: 80px
     }
+
+    .read_more_about{
+        bottom: 40px;
+        right: 40px;
+        color: white;
+        border: 1px solid white !important;
+        padding: 10px;
+        border-radius: 8px;
+        z-index: 100;
+        font-size: 24px;
+        font-weight: 400;
+      }
 
 }
 
@@ -1083,12 +1106,15 @@ a.view-all-btn:hover {
 }
 
 .about-text-portion {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0;
 
+}
+
+  .about-style-one a:hover{
+    color: white !important;
 }
 
 @media (min-width: 991px) and (max-width: 1900px) {
@@ -1113,6 +1139,17 @@ a.view-all-btn:hover {
         color: #000000;
 
     }
+    .read_more_about{
+        bottom: 40px;
+        right: 40px;
+        color: white;
+        border: 1px solid white !important;
+        padding: 10px;
+        border-radius: 8px;
+        z-index: 100;
+        font-size: 24px;
+        font-weight: 400;
+      }
 }
 
 @media (min-width: 487px) and (max-width: 991px) {
@@ -1181,6 +1218,18 @@ a.view-all-btn:hover {
     .why-choose-heading {
         font-size: 1rem;
     }
+
+    .read_more_about{
+        bottom: 20px;
+        right: 20px;
+        color: white;
+        border: 1px solid white;
+        padding: 6px 10px;
+        border-radius: 8px;
+        z-index: 100;
+        font-size: 16px;
+        font-weight: 400;
+      }
 }
 
 @media (max-width: 576px) {

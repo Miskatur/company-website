@@ -84,30 +84,21 @@ const About = ({ data, imageurl }) => {
                 </div> */}
                 <Link
                   href={"/about-us"}
-                  className="position-absolute "
-                  style={{
-                    bottom: "40px",
-                    right: "40px",
-                    fontSize: "24px",
-                    color: "white",
-                    border: "1px solid white",
-                    padding: "10px",
-                    borderRadius: "8px",
-                    zIndex: "100"
-                  }}
+                  className="position-absolute read_more_about"
+               
                 >
-                  <div className="d-flex justify-content-center align-items-center">
-                    <h4 className=" m-0">Read more about us | </h4>
-                    <Image src={arrowRight} height={40} width={40} />
+                  <div className="d-flex justify-content-center align-items-center  ">
+                    <span className="m-0 pe-2">Read more about us | </span>
+                    <Image src={arrowRight} height={40} width={40} className="img-fluid"/>
                   </div>
                 </Link>
                 <Image
-                  className="position-absolute"
+                  className="position-absolute bottom-0" 
                   src={bannerGradient}
                   sizes="(max-width: 768px) 100vw, 33vw"
                   height={500}
                   width={1920}
-                  style={{ objectFit: "-moz-initial" ,zIndex: "10"}}
+                  style={{ objectFit: "cover", zIndex: "10" }}
                   alt="gradient"
                 />
               </div>
