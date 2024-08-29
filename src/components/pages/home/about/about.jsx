@@ -57,7 +57,7 @@ const About = ({ data, imageurl }) => {
               <div
                 className="thumb bg-cover position-relative"
                 style={{
-                  backgroundImage: `url(${imagePath})`,
+                  backgroundImage: `url(${imageurl}${fifth_section_video_path})`,
                   // borderRadius: "24px",
                 }}
               >

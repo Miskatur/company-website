@@ -14,7 +14,7 @@ const SecondBlock = ({ data, imageurl, pic = Pic }) => {
     !data || Object.keys(data).length === 0 || !about_second_section_image_path
       ? pic
       : `${imageurl}${about_second_section_image_path}`;
-
+  console.log(imageurl, " imageurl");
   return (
     <div
       className="pt-40 pb-40 ps-140 ps-140 pe-140 global-padding default-padding-top default-padding-bottom"
@@ -96,7 +96,7 @@ const SecondBlock = ({ data, imageurl, pic = Pic }) => {
 
               <Image
                 className=""
-                src={imagePath}
+                src={`${imageurl}${about_second_section_image_path}`}
                 alt="Idea Illustration"
                 height={500}
                 width={500}
