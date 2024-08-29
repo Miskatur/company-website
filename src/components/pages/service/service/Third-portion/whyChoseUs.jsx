@@ -1,16 +1,23 @@
 import React from "react";
 import Pic from "../../../../../../public/img/axil-custom/2.png";
-import Check from "../../../../../../public/img/axil-custom/check.png";
 import Image from "next/image";
 
-const WhyChoseUs = ({ data = {}, title, description, list = [], imageUrl, pic = Pic, }) => {
+const WhyChoseUs = ({
+  data = {},
+  title,
+  description,
+  list = [],
+  imageUrl,
+  pic = Pic,
+}) => {
   // Destructure with a fallback to avoid undefined errors
   const { choose_us_image_path } = data;
 
-  const imagePath = !data || Object.keys(data).length === 0 || !choose_us_image_path
-    ? pic
-    : `${imageUrl}${choose_us_image_path}`;
-
+  const imagePath =
+    !data || Object.keys(data).length === 0 || !choose_us_image_path
+      ? pic
+      : `${imageUrl}${choose_us_image_path}`;
+  console.log("imagePath", imagePath);
   return (
     <div
       className="pt-40 pb-40 ps-140 ps-140 pe-140"
@@ -20,17 +27,16 @@ const WhyChoseUs = ({ data = {}, title, description, list = [], imageUrl, pic = 
         <div className="idea row ">
           <div className="why-choose-text-portion col-lg-6 order-2 order-lg-1 order-xl-1 align-items-start justify-content-center pe-lg-5">
             <p className="why-choose-heading">WHY CHOOSE US</p>
-            <h2 className="main-heading">
-              {title}
-            </h2>
+            <h2 className="main-heading">{title}</h2>
 
-            <p className="idea-content" dangerouslySetInnerHTML={{ __html: description }} />
+            <p
+              className="idea-content"
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
 
             <ul className="list-check px-0">
               {list.length > 0 ? (
-                list.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))
+                list.map((item, index) => <li key={index}>{item}</li>)
               ) : (
                 <li>No benefits listed</li>
               )}

@@ -91,16 +91,16 @@ const About = ({ data, imageurl }) => {
                       height={40}
                       width={40}
                       className="img-fluid"
+                      alt="arrow right"
                     />
                   </div>
                 </Link>
                 <Image
                   className="position-absolute bottom-0"
                   src={"/img/about/Subtract.svg"}
-                  sizes="(max-width: 768px) 100vw, 33vw"
                   height={500}
                   width={1920}
-                  style={{ objectFit: "cover", zIndex: "10" }}
+                  style={{ objectFit: "cover", zIndex: "10", width: "auto" }}
                   alt="gradient"
                 />
               </div>

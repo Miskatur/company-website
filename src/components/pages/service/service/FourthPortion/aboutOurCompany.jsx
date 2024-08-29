@@ -1,16 +1,22 @@
 import React from "react";
 import Pic from "../../../../../../public/img/axil-custom/3.png";
-import Check from "../../../../../../public/img/axil-custom/check-blue.png";
 import Image from "next/image";
 
-const AboutOurCompany = ({ data = {}, title, description, list = [], imageUrl, pic = Pic, }) => {
+const AboutOurCompany = ({
+  data = {},
+  title,
+  description,
+  list = [],
+  imageUrl,
+  pic = Pic,
+}) => {
   const { about_company_image_path } = data;
 
-  const imagePath = !data || Object.keys(data).length === 0 || !about_company_image_path
-    ? pic
-    : `${imageUrl}${about_company_image_path}`;
-
-
+  const imagePath =
+    !data || Object.keys(data).length === 0 || !about_company_image_path
+      ? pic
+      : `${imageUrl}${about_company_image_path}`;
+  console.log("imagePath about company", imagePath);
   return (
     <div
       className=" pt-40 pb-40 ps-140 ps-140 pe-140"
@@ -39,26 +45,39 @@ const AboutOurCompany = ({ data = {}, title, description, list = [], imageUrl, p
               {description}
             </p>
 
-            <div className="check-list" style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(2, 1fr)',
-              gap: '5px',
-              
-            }}>
+            <div
+              className="check-list"
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(2, 1fr)",
+                gap: "5px",
+              }}
+            >
               {list.length > 0 ? (
                 list.map((item, index) => (
-                  <p className="about-content1" style={{ color: "black", marginBottom: "10px", display: 'flex', alignItems: 'center' }} key={index}>
-                    <Image src={Check} alt="checked" height={19} /> &nbsp; {item}
+                  <p
+                    className="about-content1"
+                    style={{
+                      color: "black",
+                      marginBottom: "10px",
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                    key={index}
+                  >
+                    <Image
+                      src={"/img/axil-custom/check-blue.png"}
+                      alt="checked"
+                      height={19}
+                      width={19}
+                    />{" "}
+                    &nbsp; {item}
                   </p>
                 ))
               ) : (
                 <p>No benefits listed</p>
               )}
             </div>
-
-            
-
-
           </div>
         </div>
       </div>

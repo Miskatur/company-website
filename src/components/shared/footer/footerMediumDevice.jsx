@@ -37,7 +37,7 @@ const FooterMediumDevice = ({
             <div className="row">
               <div className="default-padding-bottom col-md-6 footer-item mt-50">
                 <div className="f-item newsletter">
-                  <Image className="footer-logo" src={imagePath} height={66} width={199} />
+                  <Image className="footer-logo" alt="footer logo" src={imagePath} height={66} width={199} />
                   <p className="get-in-touch" style={{ color: "#3D424C" }}>
                     Get in Touch
                   </p>
@@ -306,7 +306,7 @@ const FooterMediumDevice = ({
             className=" d-flex flex-row justify-content-between"
             style={{ width: "264px", paddingBottom: "20px" }}
           >
-            {socialMediaLinks.telegram ? (
+            {/* {socialMediaLinks.telegram ? (
               <Link href={socialMediaLinks.telegram}>
                 <Image
                   width={48}
@@ -324,14 +324,14 @@ const FooterMediumDevice = ({
                   alt="Telegram"
                 />
               </Link>
-            )}
+            )} */}
 
             {socialMediaLinks.facebook ? (
-              <Link href={socialMediaLinks.telegram}>
+              <Link href={socialMediaLinks.facebook}>
                 <Image
                   width={48}
                   height={48}
-                  src={facebook}
+                  src={"/img/axil-custom/facebook.svg"}
                   alt="Facebook"
                 />
               </Link>
@@ -340,18 +340,18 @@ const FooterMediumDevice = ({
                 <Image
                   width={48}
                   height={48}
-                  src={facebook}
+                  src={"/img/axil-custom/facebook.svg"}
                   alt="Facebook"
                 />
               </Link>
             )}
 
             {socialMediaLinks.linkedin ? (
-              <Link href={socialMediaLinks.telegram}>
+              <Link href={socialMediaLinks.linkedin}>
                 <Image
                   width={48}
                   height={48}
-                  src={linkedin}
+                  src={"/img/axil-custom/linkedin.svg"}
                   alt="LinkedIn"
                 />
               </Link>
@@ -360,18 +360,18 @@ const FooterMediumDevice = ({
                 <Image
                   width={48}
                   height={48}
-                  src={linkedin}
+                  src={"/img/axil-custom/linkedin.svg"}
                   alt="LinkedIn"
                 />
               </Link>
             )}
 
             {socialMediaLinks.whatsapp ? (
-              <Link href={socialMediaLinks.telegram}>
+              <Link href={socialMediaLinks.whatsapp}>
                 <Image
                   width={48}
                   height={48}
-                  src={whatsapp}
+                  src={"/img/axil-custom/whatsapp.svg"}
                   alt="WhatsApp"
                 />
               </Link>
@@ -380,7 +380,7 @@ const FooterMediumDevice = ({
                 <Image
                   width={48}
                   height={48}
-                  src={whatsapp}
+                  src={"/img/axil-custom/whatsapp.svg"}
                   alt="WhatsApp"
                 />
               </Link>

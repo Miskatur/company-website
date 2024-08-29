@@ -67,16 +67,16 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <title>Axilsoft Limited</title>
-        <link rel="icon" href="/img/logo/logo.svg" type="image/png"/>
+        <link rel="icon" href="/img/logo/logo.svg" type="image/png" />
       </head>
-      <StoreProvider>
-        <body className={`${archivo.className}`}>
+      <body className={`${archivo.className}`}>
+        <StoreProvider>
           <Header />
           {children}
           <ToastContainer />
           <Footer />
-        </body>
-      </StoreProvider>
+        </StoreProvider>
+      </body>
     </html>
   );
 }

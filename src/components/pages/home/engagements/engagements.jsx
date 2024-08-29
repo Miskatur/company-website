@@ -14,7 +14,6 @@ const Engagements = () => {
 
   const engagementlist = data?.data?.engagement_list || [];
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
   const engagementsToRender = engagementlist.length > 0 ? engagementlist : EngagementData;
 
@@ -36,7 +35,7 @@ const Engagements = () => {
                 className="col-xl-4 col-lg-6 col-md-6 "
                 key={engagement?.id}
               >
-                <SingleEngagement engagement={engagement} imageurl={baseUrl}/>
+                <SingleEngagement engagement={engagement}/>
               </div>
             ))}
           </div>

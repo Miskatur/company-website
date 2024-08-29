@@ -23,6 +23,11 @@ const SubHeader = ({
               alt="Image Not Found"
               width={352}
               height={373}
+              priority={true}
+              style={{
+                height: "auto",
+                width: "auto"
+              }}
             />
           </div>
           <div className="row">

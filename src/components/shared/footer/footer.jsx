@@ -83,9 +83,10 @@ const Footer = () => {
                 <div className="f-item newsletter">
                   <Image
                     className="footer-logo"
-                    src={imagePath}
+                    src={`${imageurl}${businessSettings.company_logo_path}`}
                     height={66}
                     width={199}
+                    alt="footer logo"
                   />
 
                   <p className="get-in-touch" style={{ color: "#3D424C" }}>
@@ -445,7 +446,7 @@ const Footer = () => {
           services={services}
           solutions={solutions}
           businessSettings={businessSettings}
-          imagePath={imagePath}
+          imagePath={`${imageurl}${businessSettings.company_logo_path}`}
         />
 
         <div className="footer-bottom text-light ">

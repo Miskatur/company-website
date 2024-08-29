@@ -24,7 +24,8 @@ const ServiceDetails = () => {
         ideaText={IdeaText[0].description}
         ideaText1={IdeaText[1].description1}
       />
-      <AboutOurCompany />    </div>
+      <AboutOurCompany />{" "}
+    </div>
   );
 };
 

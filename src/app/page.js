@@ -19,7 +19,7 @@ const Home = () => {
       {isLoading || isFetching ? (
         <Preloader isLoading={isLoading || isFetching} />
       ) : (
-        <Suspense fallback={<>Loading..</>}>
+        <>
           <Banner data={pageData} imageurl={baseUrl} />
           <Services />
           <Engagements />
@@ -29,7 +29,7 @@ const Home = () => {
           {/* <Project /> */}
           {/* <WhyChooseUsV1 chooseClass="bg-gray" /> */}
           {/* <Team /> */}
-        </Suspense>
+        </>
       )}
     </div>
   );
