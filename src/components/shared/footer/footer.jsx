@@ -7,10 +7,10 @@ import FooterMediumDevice from "./footerMediumDevice";
 import { useHomepageDataQuery } from "@/features/homepage";
 import { useBusinesssettingsDataQuery } from "@/features/businesssettings";
 
-import whatsapp from '../../../../public/img/axil-custom/whatsapp.svg'
-import facebook from '../../../../public/img/axil-custom/facebook.svg'
-import telegram from '../../../../public/img/axil-custom/share.svg'
-import linkedin from '../../../../public/img/axil-custom/linkedin.svg'
+import whatsapp from "../../../../public/img/axil-custom/whatsapp.svg";
+import facebook from "../../../../public/img/axil-custom/facebook.svg";
+import telegram from "../../../../public/img/axil-custom/share.svg";
+import linkedin from "../../../../public/img/axil-custom/linkedin.svg";
 
 const Footer = () => {
   const imageurl = process.env.NEXT_PUBLIC_BASE_URL;
@@ -106,14 +106,14 @@ const Footer = () => {
                     <ul className="p-0 mt-0 pt-0">
                       <li>
                         <Link
-                          href="/about-us"
+                          href="/"
                           className="text-decoration-none p-0"
                           style={{ color: "rgba(255, 255, 255, 0.7)" }}
                         >
                           Home
                         </Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link
                           href="/about-us"
                           className="text-decoration-none"
@@ -121,7 +121,7 @@ const Footer = () => {
                         >
                           Services
                         </Link>
-                      </li>
+                      </li> */}
                       <li>
                         <Link
                           href="/about-us"
@@ -133,16 +133,16 @@ const Footer = () => {
                       </li>
                       <li>
                         <Link
-                          href="/about-us"
+                          href="/career"
                           className="text-decoration-none"
                           style={{ color: "rgba(255, 255, 255, 0.7)" }}
                         >
-                          Carrer
+                          Career
                         </Link>
                       </li>
                       <li>
                         <Link
-                          href="/about-us"
+                          href="/contact-us"
                           className="text-decoration-none"
                           style={{ color: "rgba(255, 255, 255, 0.7)" }}
                         >
@@ -151,7 +151,7 @@ const Footer = () => {
                       </li>
                       <li>
                         <Link
-                          href="/about-us"
+                          href="/blogs"
                           className="text-decoration-none"
                           style={{ color: "rgba(255, 255, 255, 0.7)" }}
                         >
@@ -392,7 +392,7 @@ const Footer = () => {
                 <Image
                   width={48}
                   height={48}
-                  src={facebook}
+                  src={"/img/axil-custom/facebook.svg"}
                   alt="Facebook"
                 />
               </Link>
@@ -403,7 +403,7 @@ const Footer = () => {
                 <Image
                   width={48}
                   height={48}
-                  src={linkedin}
+                  src={"/img/axil-custom/linkedin.svg"}
                   alt="LinkedIn"
                 />
               </Link>
@@ -412,7 +412,7 @@ const Footer = () => {
                 <Image
                   width={48}
                   height={48}
-                  src={linkedin}
+                  src={"/img/axil-custom/linkedin.svg"}
                   alt="LinkedIn"
                 />
               </Link>
@@ -432,7 +432,7 @@ const Footer = () => {
                 <Image
                   width={48}
                   height={48}
-                  src={whatsapp}
+                  src={"/img/axil-custom/whatsapp.svg"}
                   alt="WhatsApp"
                 />
               </Link>

@@ -26,13 +26,27 @@ const archivo = Archivo({
 export const metadata = {
   title: "Axilsoft Limited",
   description: "Axilsoft Limited is one of the fastest growing digital technology platforms.",
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
     // url: "https://royalshuttlebelize.com",
     title: "Axilsoft Limited",
+    type: 'website',
     description:
-     "Axilsoft Limited is one of the fastest growing digital technology platforms.",
+      "Axilsoft Limited is one of the fastest growing digital technology platforms.",
     siteName: "axilsoft-limited",
     images: [
       {
@@ -44,20 +58,23 @@ export const metadata = {
     ],
   },
   keywords: [
-  
+
   ],
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>Axilsoft Limited</title>
+        <link rel="icon" href="/img/logo/logo.svg" type="image/png"/>
+      </head>
       <StoreProvider>
         <body className={`${archivo.className}`}>
-
           <Header />
           {children}
           <ToastContainer />
-          <Footer/>
+          <Footer />
         </body>
       </StoreProvider>
     </html>
