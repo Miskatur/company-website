@@ -16,12 +16,12 @@ const nextConfig = {
       {
         protocol: 'http',
         hostname: 'localhost',
-        port: '80,443',
+        port: '80443',
         pathname: '/**',
       },
       {
         hostname: "localhost",
-        port: '80443',
+        port: '3306',
       },
       {
         hostname: "company-website-frontend-liart.vercel.app"
