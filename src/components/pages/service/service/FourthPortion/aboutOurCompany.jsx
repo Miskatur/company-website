@@ -29,7 +29,7 @@ const AboutOurCompany = ({
       <div className="global-padding">
         <div className="idea row">
           <div className="why-choose-pic-portion col-lg-6 order-1 order-lg-2 order-xl-1 pe-lg-5">
-            <Image
+            <img
               className="idea-image"
               src={imagePath}
               alt="Idea Illustration"
