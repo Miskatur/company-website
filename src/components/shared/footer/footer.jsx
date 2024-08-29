@@ -7,23 +7,25 @@ import FooterMediumDevice from "./footerMediumDevice";
 import { useHomepageDataQuery } from "@/features/homepage";
 import { useBusinesssettingsDataQuery } from "@/features/businesssettings";
 
-
-
+import whatsapp from '../../../../public/img/axil-custom/whatsapp.svg'
+import facebook from '../../../../public/img/axil-custom/facebook.svg'
+import telegram from '../../../../public/img/axil-custom/share.svg'
+import linkedin from '../../../../public/img/axil-custom/linkedin.svg'
 
 const Footer = () => {
-
   const imageurl = process.env.NEXT_PUBLIC_BASE_URL;
-
-
 
   const { data, isLoading, isFetching, error } = useBusinesssettingsDataQuery();
 
-
   const businessSettings = data?.data?.business_settings || {};
-  const contactPhone = businessSettings.company_primary_phone || "+880123456789";
-  const contactPhonesecondary = businessSettings.company_secondary_phone || "+880123456789";
+  const contactPhone =
+    businessSettings.company_primary_phone || "+880123456789";
+  const contactPhonesecondary =
+    businessSettings.company_secondary_phone || "+880123456789";
   const contactEmail = businessSettings.company_email || "companyemail.com";
-  const contactAddress = businessSettings.company_address || "4517 Washington Ave, Manchester, Kentucky 39495";
+  const contactAddress =
+    businessSettings.company_address ||
+    "4517 Washington Ave, Manchester, Kentucky 39495";
   const socialMediaLinks = {
     telegram: businessSettings.social_media_telegram,
     facebook: businessSettings.social_media_facebook,
@@ -32,21 +34,23 @@ const Footer = () => {
   };
   const copyright = businessSettings.copy_right_text || "All rights reserved";
 
+  const imagePath =
+    !businessSettings ||
+    Object.keys(businessSettings).length === 0 ||
+    !businessSettings.company_logo_path
+      ? logo
+      : `${imageurl}${businessSettings.company_logo_path}`;
 
+  const {
+    data: homepageData,
+    isLoading: homepageLoading,
+    isFetching: homepageFetching,
+    error: homepageError,
+  } = useHomepageDataQuery();
 
-  const imagePath = !businessSettings || Object.keys(businessSettings).length === 0 || !businessSettings.company_logo_path
-    ? logo
-    : `${imageurl}${businessSettings.company_logo_path}`;
-
-
-
-  const { data: homepageData, isLoading: homepageLoading, isFetching: homepageFetching, error: homepageError } = useHomepageDataQuery();
-
-
-
-
-  const { sixth_section_title = "Want to discuss a Project? Let’s Start Brain storming" } = homepageData?.data?.page_data || {};
-
+  const {
+    sixth_section_title = "Want to discuss a Project? Let’s Start Brain storming",
+  } = homepageData?.data?.page_data || {};
 
   const services = data?.data?.service_list || [];
   const solutions = data?.data?.solution_list || [];
@@ -61,9 +65,7 @@ const Footer = () => {
       >
         <div className="build-team">
           <div className="dialog-portion">
-            <div className="title">
-              {sixth_section_title}
-            </div>
+            <div className="title">{sixth_section_title}</div>
             <div className="subtitle">
               We’re here to help you. Let’s discuss your project.
             </div>
@@ -79,22 +81,22 @@ const Footer = () => {
             <div className="row">
               <div className="col-lg-4 col-md-6 footer-item mt-50">
                 <div className="f-item newsletter">
-
-                  <Image src={imagePath} height={66} width={199} />
-
+                  <Image
+                    className="footer-logo"
+                    src={imagePath}
+                    height={66}
+                    width={199}
+                  />
 
                   <p className="get-in-touch" style={{ color: "#3D424C" }}>
                     Get in Touch
                   </p>
                   <p className="all-subtitle mt-30 mb-1">{contactPhone}</p>
-                  <p className="all-subtitle m-0 mb-4">{contactPhonesecondary}</p>
-                  <p className="all-subtitle m">Email - {contactEmail}</p>
-                  <p className="all-subtitle m-0">
-                    {contactAddress}
+                  <p className="all-subtitle m-0 mb-4">
+                    {contactPhonesecondary}
                   </p>
-
-
-
+                  <p className="all-subtitle m">Email - {contactEmail}</p>
+                  <p className="all-subtitle m-0">{contactAddress}</p>
                 </div>
               </div>
               <div className=" col-md-6 col-xxl-8 row justify-content-between align-items-start">
@@ -167,7 +169,11 @@ const Footer = () => {
                       {services.slice(0, 10).length > 0 ? (
                         services.map((service) => (
                           <li key={service.id}>
-                            <Link href={`/service/${service.uid}`} className="text-decoration-none p-0" style={{ color: "rgba(255, 255, 255, 0.7)" }}>
+                            <Link
+                              href={`/service/${service.uid}`}
+                              className="text-decoration-none p-0"
+                              style={{ color: "rgba(255, 255, 255, 0.7)" }}
+                            >
                               {service.title}
                             </Link>
                           </li>
@@ -229,7 +235,6 @@ const Footer = () => {
                             </Link>
                           </li>
                         </>
-
                       )}
                     </ul>
                   </div>
@@ -242,7 +247,11 @@ const Footer = () => {
                       {solutions.slice(0, 10).length > 0 ? (
                         solutions.map((solution) => (
                           <li key={solution.id}>
-                            <Link href={`/solutions/${solution.uid}`} className="text-decoration-none p-0" style={{ color: "rgba(255, 255, 255, 0.7)" }}>
+                            <Link
+                              href={`/solutions/${solution.uid}`}
+                              className="text-decoration-none p-0"
+                              style={{ color: "rgba(255, 255, 255, 0.7)" }}
+                            >
                               {solution.title}
                             </Link>
                           </li>
@@ -340,7 +349,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="social-padding  d-none d-xxl-block">
+        <div className="footer-block  d-none d-xxl-block">
           <p className="get-in-touch mt-20" style={{ color: "#3D424C" }}>
             Social Link
           </p>
@@ -354,98 +363,80 @@ const Footer = () => {
                 <Image
                   width={48}
                   height={48}
-                  src="./img/axil-custom/share.svg"
+                  src={telegram}
                   alt="Telegram"
                 />
               </Link>
-            )
-              :
-              (
-                <Link href='#'>
-                  <Image
-                    width={48}
-                    height={48}
-                    src="./img/axil-custom/share.svg"
-                    alt="Telegram"
-                  />
-                </Link>
-              )
-
-            }
+            ) : (
+              <Link href="#">
+                <Image
+                  width={48}
+                  height={48}
+                  src={telegram}
+                  alt="Telegram"
+                />
+              </Link>
+            )}
 
             {socialMediaLinks.facebook ? (
               <Link href={socialMediaLinks.telegram}>
                 <Image
                   width={48}
                   height={48}
-                  src="./img/axil-custom/facebook.svg"
+                  src={facebook}
                   alt="Facebook"
                 />
               </Link>
-            )
-
-              :
-              (
-                <Link href='#'>
-                  <Image
-                    width={48}
-                    height={48}
-                    src="./img/axil-custom/facebook.svg"
-                    alt="Facebook"
-                  />
-                </Link>
-              )
-            }
+            ) : (
+              <Link href="#">
+                <Image
+                  width={48}
+                  height={48}
+                  src={facebook}
+                  alt="Facebook"
+                />
+              </Link>
+            )}
 
             {socialMediaLinks.linkedin ? (
               <Link href={socialMediaLinks.telegram}>
                 <Image
                   width={48}
                   height={48}
-                  src="./img/axil-custom/linkedin.svg"
+                  src={linkedin}
                   alt="LinkedIn"
                 />
               </Link>
-            )
-              :
-              (
-                <Link href='#'>
-                  <Image
-                    width={48}
-                    height={48}
-                    src="./img/axil-custom/linkedin.svg"
-                    alt="LinkedIn"
-                  />
-                </Link>
-              )
-            }
+            ) : (
+              <Link href="#">
+                <Image
+                  width={48}
+                  height={48}
+                  src={linkedin}
+                  alt="LinkedIn"
+                />
+              </Link>
+            )}
 
             {socialMediaLinks.whatsapp ? (
               <Link href={socialMediaLinks.telegram}>
                 <Image
                   width={48}
                   height={48}
-                  src="./img/axil-custom/whatsapp.svg"
+                  src={whatsapp}
                   alt="WhatsApp"
                 />
               </Link>
-            )
-              :
-              (
-                <Link href='#'>
-                  <Image
-                    width={48}
-                    height={48}
-                    src="./img/axil-custom/whatsapp.svg"
-                    alt="WhatsApp"
-                  />
-                </Link>
-              )
-            }
-
-
-
-
+            ) : (
+              <Link href="#">
+                <Image
+                  width={48}
+                  height={48}
+                  src={whatsapp}
+                  alt="WhatsApp"
+                />
+              </Link>
+            )}
           </div>
         </div>
 
@@ -461,8 +452,7 @@ const Footer = () => {
           <div className="global-padding social-padding">
             <div className="row">
               <div className="col-md-6 text-center text-md-start">
-                <p>
-                  &copy; {copyright}</p>
+                <p>&copy; {copyright}</p>
               </div>
 
               {/* <div className="col-md-"></div> */}

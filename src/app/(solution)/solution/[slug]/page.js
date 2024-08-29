@@ -20,7 +20,7 @@ const Solutions = ({ params }) => {
 
     const engagepagelist = data?.data?.page_data || [];
 
-    const matchedSolution = engagelist?.find(engage => engage.uid === slug);
+    const matchedSolution = engagelist?.find(engage => engage?.uid === slug);
 
 
     return (

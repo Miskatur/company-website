@@ -7,11 +7,11 @@ const SolutionDetails = ({ slug, engagelist }) => {
 
   useEffect(() => {
     if (slug) {
-      // If slug is provided, expand the item matching the slug
-      const matchedIndex = engagelist?.findIndex(engage => engage.uid === slug);
+      
+      const matchedIndex = engagelist?.findIndex(engage => engage?.uid === slug);
       setExpandedIndex(matchedIndex !== -1 ? matchedIndex : null);
     } else {
-      // If no slug, default to expanding the first item if present
+     
       setExpandedIndex(engagelist.length > 0 ? 0 : null);
     }
   }, [engagelist, slug]);
@@ -30,10 +30,10 @@ const SolutionDetails = ({ slug, engagelist }) => {
           <div className="col-xl-5">
             <div className="experience-style-one">
               <h3 className="title">
-              {currentItem ? currentItem.title : "Default Title"}
+              {currentItem ? currentItem?.title : "Default Title"}
               </h3>
               <p className="engagement-text">
-              {currentItem ? currentItem.description : "Default Title"}
+              {currentItem ? currentItem?.description : "Default Description"}
               </p>
             </div>
           </div>
@@ -45,7 +45,7 @@ const SolutionDetails = ({ slug, engagelist }) => {
                   const parsedDetails = JSON.parse(faq.details);
                   return (
                     <ExpandableList
-                      key={faq.uid}
+                      key={faq?.uid}
                       faq={faq}
                       isExpanded={expandedIndex === index}
                       onExpand={() => handleExpand(index)}

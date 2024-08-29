@@ -24,7 +24,7 @@ const SingleEngagement = ({ engagement, imageurl }) => {
       <div className="services-style-one position-relative">
         <div className="d-flex justify-content-between align-content-center">
           <Image src={imagePath} alt="Icon" width={120} height={140} />
-          <Link href={`/service/${uid}`} className="d-none d-xl-flex">
+          <Link href={`/solution/${uid}`} className="d-none d-xl-flex">
             {/* <i className={"fas fa-long-arrow-right"}></i> */}
             <Image src={arrowIcon} width={80} height={80} />
           </Link>
@@ -41,7 +41,7 @@ const SingleEngagement = ({ engagement, imageurl }) => {
             bottom: "30px",
           }}
         >
-          <Link href={`/service/${uid}`} className="read-more-btn">
+          <Link href={`/solution/${uid}`} className="read-more-btn">
             Read More
           </Link>
         </div>

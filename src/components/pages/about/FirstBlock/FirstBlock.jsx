@@ -17,7 +17,7 @@ const FirstBlock = ({ data, imageurl }) => {
     ? "/img/axil-custom/1.svg"  
     : `${imageurl}${about_first_section_image_path}`;
 
-    alert(imagePath);
+    // alert(imagePath);
 
   return (
     <>
