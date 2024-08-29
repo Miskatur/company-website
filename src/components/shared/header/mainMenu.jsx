@@ -2,12 +2,21 @@ import Link from "next/link";
 import React from "react";
 import serviceJSON from "@/components/jsonData/Services.json";
 import Image from "next/image";
-const MainMenu = ({ isOpen, closeMenu, toggleSubMenu, toggleMegaMenu, services, solutions, imagePath }) => {
+const MainMenu = ({
+  isOpen,
+  closeMenu,
+  toggleSubMenu,
+  toggleMegaMenu,
+  services,
+  solutions,
+  imagePath,
+}) => {
   return (
     <>
       <div
-        className={`collapse navbar-collapse collapse-mobile  ${isOpen ? "show" : ""
-          }`}
+        className={`collapse navbar-collapse collapse-mobile  ${
+          isOpen ? "show" : ""
+        }`}
         id="navbar-menu"
       >
         <Image
@@ -39,9 +48,8 @@ const MainMenu = ({ isOpen, closeMenu, toggleSubMenu, toggleMegaMenu, services, 
                   </li>
                 ))
               ) : (
-                ''
+                <li>No options available</li>
               )}
-
             </ul>
           </li>
 
@@ -63,7 +71,7 @@ const MainMenu = ({ isOpen, closeMenu, toggleSubMenu, toggleMegaMenu, services, 
                   </li>
                 ))
               ) : (
-                ''
+                <li>No options available</li>
               )}
             </ul>
           </li>
