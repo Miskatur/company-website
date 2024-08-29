@@ -3,8 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import ModalVideo from "react-modal-video";
-import arrowRight from "../../../../../public/img/icon/arrow-right.svg";
-import bannerGradient from "../../../../../public/img/about/Subtract.svg";
 const About = ({ data, imageurl }) => {
   const [isOpen, setOpen] = useState(false);
 
@@ -85,16 +83,20 @@ const About = ({ data, imageurl }) => {
                 <Link
                   href={"/about-us"}
                   className="position-absolute read_more_about"
-               
                 >
                   <div className="d-flex justify-content-center align-items-center  ">
                     <span className="m-0 pe-2">Read more about us | </span>
-                    <Image src={arrowRight} height={40} width={40} className="img-fluid"/>
+                    <Image
+                      src={"/img/icon/arrow-right.svg"}
+                      height={40}
+                      width={40}
+                      className="img-fluid"
+                    />
                   </div>
                 </Link>
                 <Image
-                  className="position-absolute bottom-0" 
-                  src={bannerGradient}
+                  className="position-absolute bottom-0"
+                  src={"/img/about/Subtract.svg"}
                   sizes="(max-width: 768px) 100vw, 33vw"
                   height={500}
                   width={1920}

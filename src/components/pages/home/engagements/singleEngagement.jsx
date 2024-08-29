@@ -1,32 +1,33 @@
-import { MoveUpRightIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import arrowIcon from "../../../../../public/img/icon/arrow-up-right.svg";
 const SingleEngagement = ({ engagement, imageurl }) => {
   const {
     id,
     uid,
-    serviceLink,
-    icon1,
-    icon2,
     description,
     title,
     banner_path,
   } = engagement;
-  const imagePath =
-    !engagement || Object.keys(engagement).length === 0 || !banner_path
-      ? `/img/icon/${icon1}`
-      : `${imageurl}${banner_path}`;
-
+ 
   return (
     <>
       <div className="services-style-one position-relative">
         <div className="d-flex justify-content-between align-content-center">
-          <Image src={imagePath} alt="Icon" width={120} height={140} />
+          <Image
+            src={`${imageurl}${banner_path}`}
+            alt="Icon"
+            width={120}
+            height={140}
+          />
           <Link href={`/solution/${uid}`} className="d-none d-xl-flex">
             {/* <i className={"fas fa-long-arrow-right"}></i> */}
-            <Image src={arrowIcon} width={80} height={80} />
+            <Image
+              src={"/img/icon/arrow-up-right.svg"}
+              width={80}
+              height={80}
+              alt="arrow up right"
+            />
           </Link>
         </div>
         <h4> {title.length > 30 ? title.slice(0, 30) + "..." : title}</h4>

@@ -356,9 +356,9 @@ const Footer = () => {
 
           <div
             className=" d-flex flex-row justify-content-between"
-            style={{ width: "264px", paddingBottom: "20px" }}
+            style={{ width: "180px", paddingBottom: "20px" }}
           >
-            {socialMediaLinks.telegram ? (
+            {/* {socialMediaLinks.telegram ? (
               <Link href={socialMediaLinks.telegram}>
                 <Image
                   width={48}
@@ -376,14 +376,14 @@ const Footer = () => {
                   alt="Telegram"
                 />
               </Link>
-            )}
+            )} */}
 
             {socialMediaLinks.facebook ? (
-              <Link href={socialMediaLinks.telegram}>
+              <Link href={socialMediaLinks.facebook}>
                 <Image
                   width={48}
                   height={48}
-                  src={facebook}
+                  src={"/img/axil-custom/facebook.svg"}
                   alt="Facebook"
                 />
               </Link>
@@ -399,7 +399,7 @@ const Footer = () => {
             )}
 
             {socialMediaLinks.linkedin ? (
-              <Link href={socialMediaLinks.telegram}>
+              <Link href={socialMediaLinks.linkedin}>
                 <Image
                   width={48}
                   height={48}
@@ -419,11 +419,11 @@ const Footer = () => {
             )}
 
             {socialMediaLinks.whatsapp ? (
-              <Link href={socialMediaLinks.telegram}>
+              <Link href={socialMediaLinks.whatsapp}>
                 <Image
                   width={48}
                   height={48}
-                  src={whatsapp}
+                  src={"/img/axil-custom/whatsapp.svg"}
                   alt="WhatsApp"
                 />
               </Link>
