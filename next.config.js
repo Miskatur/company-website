@@ -3,6 +3,9 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
+        hostname: "company-website-one-theta.vercel.app"
+      },
+      {
         protocol: 'http',
         hostname: 'admin.axilsoft.com',
         port: '',
@@ -10,7 +13,11 @@ const nextConfig = {
       },
       {
         hostname: "localhost"
-      }
+      },
+      {
+        hostname: "company-website-frontend-liart.vercel.app"
+      },
+
     ],
   },
   experimental: {

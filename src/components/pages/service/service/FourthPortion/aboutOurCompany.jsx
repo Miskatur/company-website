@@ -15,8 +15,12 @@ const AboutOurCompany = ({
   const imagePath =
     !data || Object.keys(data).length === 0 || !about_company_image_path
       ? pic
-      : `${imageUrl}${about_company_image_path}`;
+      : `${imageUrl + about_company_image_path}`;
   console.log("imagePath about company", imagePath);
+  console.log(
+    "imagePath about company122",
+    imageUrl + about_company_image_path
+  );
   return (
     <div
       className=" pt-40 pb-40 ps-140 ps-140 pe-140"
@@ -27,7 +31,7 @@ const AboutOurCompany = ({
           <div className="why-choose-pic-portion col-lg-6 order-1 order-lg-2 order-xl-1 pe-lg-5">
             <Image
               className="idea-image"
-              src={imagePath}
+              src={imageUrl + about_company_image_path}
               alt="Idea Illustration"
               width={500}
               height={500}
