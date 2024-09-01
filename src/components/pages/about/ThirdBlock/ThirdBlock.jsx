@@ -88,8 +88,8 @@ const ThirdBlock = ({ data, imageurl, pic = Pic }) => {
                 width={800}
                 style={{
                   position: "absolute",
-                  // height: "120%",
-                  // width: "100%",
+                  height: "120%",
+                  width: "100%",
                   zIndex: 0,
                   left: "-43%",
                   bottom: "0%",
