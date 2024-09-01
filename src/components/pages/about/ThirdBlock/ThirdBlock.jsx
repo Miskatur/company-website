@@ -10,11 +10,6 @@ const ThirdBlock = ({ data, imageurl, pic = Pic }) => {
     about_third_section_image_path,
   } = data || {};
 
-  const imagePath =
-    !data || Object.keys(data).length === 0 || !about_third_section_image_path
-      ? pic
-      : `${imageurl}${about_third_section_image_path}`;
-
   return (
     <div
       className="pt-40 pb-40 ps-140 ps-140 pe-140 global-padding"
@@ -99,7 +94,7 @@ const ThirdBlock = ({ data, imageurl, pic = Pic }) => {
 
               <Image
                 className="idea-image"
-                src={imagePath}
+                src={`${imageurl}${about_third_section_image_path}`}
                 alt="Our Story Image"
                 height={600}
                 width={900}

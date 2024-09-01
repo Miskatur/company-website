@@ -12,11 +12,6 @@ const FirstBlock = ({ data, imageurl }) => {
     about_first_section_image_path,
   } = data || {};
 
-  const imagePath =
-    !data || Object.keys(data).length === 0 || !about_first_section_image_path
-      ? "/img/axil-custom/1.svg"
-      : `${imageurl}${about_first_section_image_path}`;
-
   return (
     <>
       <div className="about-style-two-area global-padding default-padding-bottom">
@@ -25,7 +20,7 @@ const FirstBlock = ({ data, imageurl }) => {
             <div className="col-lg-6 about-style-two pe-lg-6">
               {/* <div className=""> */}
               <Image
-                src={imagePath}
+                src={`${imageurl}${about_first_section_image_path}`}
                 alt="Image Not Found"
                 height={847}
                 width={768}

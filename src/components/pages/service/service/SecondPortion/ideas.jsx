@@ -1,21 +1,9 @@
 import React from "react";
-import Pic from "../../../../../../public/img/axil-custom/1.png";
 import Image from "next/image";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-const Ideas = ({
-  data = {},
-  ideaPic = Pic,
-  ideaText,
-  ideaHeading,
-  imageUrl,
-}) => {
+const Ideas = ({ data = {}, ideaPic, ideaText, ideaHeading, imageUrl }) => {
   const { file_path } = data;
-
-  const imagePath =
-    !data || Object.keys(data).length === 0 || !file_path
-      ? ideaPic
-      : `${imageUrl}${file_path}`;
 
   return (
     <div
@@ -27,7 +15,7 @@ const Ideas = ({
           <div className="idea-pic-portion col-lg-6 pe-lg-5">
             {/* <Image
               className="idea-image"
-              src={imagePath}
+              src={`${imageUrl}${file_path}`}
               alt="Idea Illustration"
               width={500}
               height={600}
@@ -42,7 +30,7 @@ const Ideas = ({
                 objectFit: "contain",
               }}
               alt="Idea file path"
-              src={imagePath}
+              src={`${imageUrl}${file_path}`}
             />
           </div>
           <div className="idea-text-portion col-lg-6  d-flex flex-column align-items-start justify-content-center mt-4 mt-xl-0 ps-lg-5">

@@ -6,11 +6,6 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 const SingleTeam = ({ team, imageurl }) => {
   const { name, designation, image_path } = team;
 
-  const imagePath =
-    !team || Object.keys(team).length === 0 || !image_path
-      ? `/img/team/1.jpg`
-      : `${imageurl}${image_path}`;
-
   return (
     <>
       <div className="team-style-two">
@@ -33,7 +28,7 @@ const SingleTeam = ({ team, imageurl }) => {
               objectFit: "contain",
             }}
             alt="Team member image"
-            src={imagePath}
+            src={`${imageurl}${image_path}`}
           />
           <div className="team-info">
             <div className="content">

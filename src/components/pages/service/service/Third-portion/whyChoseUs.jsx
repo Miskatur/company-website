@@ -1,5 +1,4 @@
 import React from "react";
-import Pic from "../../../../../../public/img/axil-custom/2.png";
 import Image from "next/image";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
@@ -9,16 +8,10 @@ const WhyChoseUs = ({
   description,
   list = [],
   imageUrl,
-  pic = Pic,
+  pic ,
 }) => {
   // Destructure with a fallback to avoid undefined errors
   const { choose_us_image_path } = data;
-
-  const imagePath =
-    !data || Object.keys(data).length === 0 || !choose_us_image_path
-      ? pic
-      : `${imageUrl}${choose_us_image_path}`;
-  console.log("imagePath", imagePath);
 
   return (
     <div
@@ -54,7 +47,7 @@ const WhyChoseUs = ({
                 width: "100%",
               }}
               alt="Idea Illustration"
-              src={imagePath}
+              src={`${imageUrl}${choose_us_image_path}`}
             />
           </div>
         </div>

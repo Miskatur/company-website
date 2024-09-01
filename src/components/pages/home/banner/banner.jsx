@@ -6,13 +6,8 @@ const Banner = ({ data, imageurl }) => {
     first_section_title = "IT Services & Resource Augmentation Partner",
     first_section_description = "Comprehensive offshore Agile software development services and your dedicated partner in crafting high-quality bespoke software solutions",
     first_section_button_text = "Let’s Start Something Amazing!",
-    first_section_image_path
+    first_section_image_path,
   } = data || {};
-
-
-  const imagePath = !data || Object.keys(data).length === 0 || !first_section_image_path
-    ? "img/banner/hero-image.svg"  
-    : `${imageurl}${first_section_image_path}`; 
 
   return (
     <div className="banner-style-one global-padding ">
@@ -44,7 +39,9 @@ const Banner = ({ data, imageurl }) => {
                   className="mt-40 fadeInUp"
                 >
                   <Link href="/contact-us" className="hbutton">
-                    <span className="button-text">{first_section_button_text}</span>
+                    <span className="button-text">
+                      {first_section_button_text}
+                    </span>
                     <div className="group-10">
                       <div className="rectangle-9">
                         <svg
@@ -74,7 +71,7 @@ const Banner = ({ data, imageurl }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.4 }}
                 className="fadeInDown"
-                src={imagePath}
+                src={`${imageurl}${first_section_image_path}`}
                 alt="Banner Image"
               />
             </div>

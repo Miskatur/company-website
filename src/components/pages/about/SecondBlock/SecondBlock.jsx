@@ -1,20 +1,14 @@
 import React from "react";
-import Pic from "../../../../../public/img/axil-custom/2.svg";
 import passion from "../../../../../public/img/axil-custom/passion.svg";
 import Image from "next/image";
 
-const SecondBlock = ({ data, imageurl, pic = Pic }) => {
+const SecondBlock = ({ data, imageurl }) => {
   const {
     about_second_section_title = "We are Passionate to make a change",
     about_second_section_description = "Only skill is not enough to excel; passion is essential. We are as skilled as we are passionate about what we do—software development. Creating custom software solutions is not just a task for us; it’s a way of life, nourishing our thirst for seeking out opportunities to develop ourselves. Our enthusiasm for IT and business extends into our leisure time as well. We actively discuss the latest technology with our peers and stay updated on all the latest business automation news.",
     about_second_section_image_path,
   } = data || {};
 
-  const imagePath =
-    !data || Object.keys(data).length === 0 || !about_second_section_image_path
-      ? pic
-      : `${imageurl}${about_second_section_image_path}`;
-  console.log(imageurl, " imageurl");
   return (
     <div
       className="pt-40 pb-40 ps-140 ps-140 pe-140 global-padding default-padding-top default-padding-bottom"
@@ -92,6 +86,7 @@ const SecondBlock = ({ data, imageurl, pic = Pic }) => {
                   height: "82%",
                   width: "100%",
                 }}
+                quality={10}
               />
 
               <Image
@@ -101,6 +96,8 @@ const SecondBlock = ({ data, imageurl, pic = Pic }) => {
                 height={500}
                 width={500}
                 style={{ zIndex: 1, height: "100%", width: "100%" }}
+                quality={80}
+                loading="lazy"
               />
             </div>
           </div>

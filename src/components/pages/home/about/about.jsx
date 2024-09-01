@@ -15,10 +15,7 @@ const About = ({ data, imageurl }) => {
     fifth_section_video_path,
   } = data || {};
 
-  const imagePath =
-    !data || Object.keys(data).length === 0 || !fifth_section_video_path
-      ? "img/banner/video.svg"
-      : `${imageurl}${fifth_section_video_path}`;
+  const imagePath = `${imageurl}${fifth_section_video_path}`;
 
   return (
     <div

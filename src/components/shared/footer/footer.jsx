@@ -1,16 +1,11 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import logo from "../../../../public/img/logo/logo.svg";
 import Image from "next/image";
 import FooterMediumDevice from "./footerMediumDevice";
 import { useHomepageDataQuery } from "@/features/homepage";
 import { useBusinesssettingsDataQuery } from "@/features/businesssettings";
 
-import whatsapp from "../../../../public/img/axil-custom/whatsapp.svg";
-import facebook from "../../../../public/img/axil-custom/facebook.svg";
-import telegram from "../../../../public/img/axil-custom/share.svg";
-import linkedin from "../../../../public/img/axil-custom/linkedin.svg";
 
 const Footer = () => {
   const imageurl = process.env.NEXT_PUBLIC_BASE_URL;
@@ -33,13 +28,6 @@ const Footer = () => {
     whatsapp: businessSettings.social_media_whatsapp,
   };
   const copyright = businessSettings.copy_right_text || "All rights reserved";
-
-  const imagePath =
-    !businessSettings ||
-    Object.keys(businessSettings).length === 0 ||
-    !businessSettings.company_logo_path
-      ? logo
-      : `${imageurl}${businessSettings.company_logo_path}`;
 
   const {
     data: homepageData,

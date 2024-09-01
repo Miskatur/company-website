@@ -6,14 +6,10 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 const SingleService = ({ service, imageurl }) => {
   const { title, description, file_two_path, id, serviceLink, icon1, uid } =
     service;
-  const imagePath =
-    !service || Object.keys(service).length === 0 || !file_two_path
-      ? `/img/icon/${icon1}  `
-      : `${imageurl}${file_two_path}`;
 
   return (
     <div className="singleService position-relative">
-      {/* <Image src={imagePath} width={80} height={80} alt="Icon" /> */}
+      {/* <Image src={`${imageurl}${file_two_path}`} width={80} height={80} alt="Icon" loading="lazy"/> */}
       <LazyLoadImage
         effect="blur"
         className="img-fluid"
@@ -23,7 +19,7 @@ const SingleService = ({ service, imageurl }) => {
           objectFit: "contain",
         }}
         alt="Service Icon"
-        src={imagePath}
+        src={`${imageurl}${file_two_path}`}
       />
       <h4>{title}</h4>
       <p

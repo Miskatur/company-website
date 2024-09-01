@@ -3,7 +3,8 @@ const nextConfig = {
     images: {
         remotePatterns: [
             {
-                hostname: "localhost"
+                protocol: "http",
+                hostname: "admin.axilsoft.com"
             }
         ],
 

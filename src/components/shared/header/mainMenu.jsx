@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import serviceJSON from "@/components/jsonData/Services.json";
 import Image from "next/image";
 const MainMenu = ({
   isOpen,

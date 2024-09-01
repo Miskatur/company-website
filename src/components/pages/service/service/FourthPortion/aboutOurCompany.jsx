@@ -1,6 +1,6 @@
 import React from "react";
-import Pic from "../../../../../../public/img/axil-custom/3.png";
 import Image from "next/image";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const AboutOurCompany = ({
   data = {},
@@ -8,19 +8,10 @@ const AboutOurCompany = ({
   description,
   list = [],
   imageUrl,
-  pic = Pic,
+  pic,
 }) => {
   const { about_company_image_path } = data;
 
-  const imagePath =
-    !data || Object.keys(data).length === 0 || !about_company_image_path
-      ? pic
-      : `${imageUrl + about_company_image_path}`;
-  console.log("imagePath about company", imagePath);
-  console.log(
-    "imagePath about company122",
-    imageUrl + about_company_image_path
-  );
   return (
     <div
       className=" pt-40 pb-40 ps-140 ps-140 pe-140"
@@ -29,12 +20,22 @@ const AboutOurCompany = ({
       <div className="global-padding">
         <div className="idea row">
           <div className="why-choose-pic-portion col-lg-6 order-1 order-lg-2 order-xl-1 pe-lg-5">
-            <img
+            {/* <img
               className="idea-image"
-              src={imagePath}
+              src={`${imageUrl + about_company_image_path}`}
               alt="Idea Illustration"
               width={500}
               height={500}
+              style={{
+                height: "100%",
+                width: "100%",
+              }}
+            /> */}
+            <LazyLoadImage
+              effect="blur"
+              className="idea-image"
+              src={`${imageUrl}${about_company_image_path}`}
+              alt="Idea Illustration"
               style={{
                 height: "100%",
                 width: "100%",
