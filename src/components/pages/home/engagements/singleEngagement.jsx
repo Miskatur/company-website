@@ -37,7 +37,7 @@ const SingleEngagement = ({ engagement }) => {
               height={80}
               className="img-fluid"
               alt="arrow up right"
-              
+              loading="lazy"
             />
           </Link>
         </div>

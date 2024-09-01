@@ -8588,9 +8588,9 @@ footer .footer-bottom p {
 	}
 
 	/* Experience */
-	.experience-area .faq-style-one::after {
+	/* .experience-area .faq-style-one::after {
 		display: none;
-	}
+	} */
 
 	.experience-area .faq-style-one {
 		padding: 0;
