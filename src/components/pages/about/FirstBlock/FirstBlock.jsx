@@ -27,11 +27,12 @@ const FirstBlock = ({ data, imageurl }) => {
               <Image
                 src={imagePath}
                 alt="Image Not Found"
-                height={500}
-                width={500}
+                height={847}
+                width={768}
                 style={{
                   height: "100%",
                   width: "100%",
+                  objectFit: "fill"
                 }}
               />
               {/* </div> */}

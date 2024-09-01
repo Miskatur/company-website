@@ -84,7 +84,7 @@ const SecondBlock = ({ data, imageurl, pic = Pic }) => {
                 className="passion-signature border-black position-absolute"
                 src={"/img/axil-custom/passion.svg"}
                 alt="Passion Signature"
-                height={600}
+                height={650}
                 width={600}
                 style={{
                   left: "5.5%",

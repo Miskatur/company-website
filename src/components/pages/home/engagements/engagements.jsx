@@ -5,22 +5,18 @@ import EngagementHeader from "./engagementHeader";
 import Link from "next/link";
 import { useHomepageDataQuery } from "@/features/homepage";
 
-
-
 const Engagements = () => {
-
   const { data, isLoading, isFetching } = useHomepageDataQuery();
   const pageData = data?.data?.page_data;
 
   const engagementlist = data?.data?.engagement_list || [];
 
-
-  const engagementsToRender = engagementlist.length > 0 ? engagementlist : EngagementData;
-
+  const engagementsToRender =
+    engagementlist.length > 0 ? engagementlist : EngagementData;
 
   return (
     <div className="custom-engagement-padding">
-      <EngagementHeader data={pageData}/>
+      <EngagementHeader data={pageData} />
       <div
         className=" overflow-hidden  bg-gray bg-cover mx-1 mx-lg-0"
         style={{
@@ -32,10 +28,10 @@ const Engagements = () => {
           <div className="row mx-lg-4 my-lg-2 mx-xl-1 my-xl-1 mx-1 my-4 gap-5 gap-md-0">
             {engagementsToRender?.slice(0, 3)?.map((engagement) => (
               <div
-                className="col-xl-4 col-lg-6 col-md-6 "
+                className="col-xl-4 col-lg-6 col-md-6 my-md-3 my-xl-0"
                 key={engagement?.id}
               >
-                <SingleEngagement engagement={engagement}/>
+                <SingleEngagement engagement={engagement} />
               </div>
             ))}
           </div>
