@@ -1,6 +1,7 @@
 import React from "react";
 import Pic from "../../../../../../public/img/axil-custom/2.png";
 import Image from "next/image";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const WhyChoseUs = ({
   data = {},
@@ -45,16 +46,15 @@ const WhyChoseUs = ({
           </div>
 
           <div className="why-choose-pic-portion col-lg-6 order-1 order-lg-2 order-xl-2 d-flex justify-content-xl-start ps-lg-5">
-            <Image
+            <LazyLoadImage
+              effect="blur"
               className="idea-image mr-5"
-              src={imagePath}
-              alt="Idea Illustration"
-              width={500}
-              height={600}
               style={{
                 height: "100%",
                 width: "100%",
               }}
+              alt="Idea Illustration"
+              src={imagePath}
             />
           </div>
         </div>

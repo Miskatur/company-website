@@ -3,13 +3,12 @@ import Link from "next/link";
 import React from "react";
 
 const SingleService = ({ service, imageurl }) => {
-  const { title, description, file_path, id, serviceLink, icon1, uid } =
+  const { title, description, file_two_path, id, serviceLink, icon1, uid } =
     service;
-
   const imagePath =
-    !service || Object.keys(service).length === 0 || !file_path
+    !service || Object.keys(service).length === 0 || !file_two_path
       ? `/img/icon/${icon1}  `
-      : `${imageurl}${file_path}`;
+      : `${imageurl}${file_two_path}`;
 
   return (
     <div className="singleService position-relative">

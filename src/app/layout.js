@@ -27,12 +27,12 @@ export const metadata = {
   title: "Axilsoft Limited",
   description: "Axilsoft Limited is one of the fastest growing digital technology platforms.",
   robots: {
-    index: false,
+    index: true,
     follow: true,
     nocache: true,
     googleBot: {
       index: true,
-      follow: false,
+      follow: true,
       noimageindex: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
@@ -49,11 +49,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <title>Axilsoft Limited</title>
         <link rel="icon" href="/img/logo/logo.svg" type="image/png" />
       </head>
       <body className={`${archivo.className}`}>
-        <StoreProvider>
+        <StoreProvider > 
           <Header />
           {children}
           <ToastContainer />

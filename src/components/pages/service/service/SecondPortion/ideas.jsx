@@ -1,6 +1,7 @@
 import React from "react";
 import Pic from "../../../../../../public/img/axil-custom/1.png";
 import Image from "next/image";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Ideas = ({
   data = {},
@@ -24,13 +25,24 @@ const Ideas = ({
       <div className="global-padding">
         <div className="idea row">
           <div className="idea-pic-portion col-lg-6 pe-lg-5">
-            <Image
+            {/* <Image
               className="idea-image"
               src={imagePath}
               alt="Idea Illustration"
               width={500}
               height={600}
               style={{ width: "100%", height: "auto" }}
+            />  */}
+            <LazyLoadImage
+              effect="blur"
+              className="idea-image img-fluid"
+              style={{
+                height: "100%",
+                width: "100%",
+                objectFit: "contain",
+              }}
+              alt="Idea file path"
+              src={imagePath}
             />
           </div>
           <div className="idea-text-portion col-lg-6  d-flex flex-column align-items-start justify-content-center mt-4 mt-xl-0 ps-lg-5">
