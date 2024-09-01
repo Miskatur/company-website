@@ -33,7 +33,7 @@ const About = ({ data, imageurl }) => {
             <div
               className="about-style-one bg-dark text-light"
               style={{
-                backgroundImage: "url(img/shape/7.png)",
+                backgroundImage: "url(/img/shape/7.png)",
                 borderRadius: "16px",
               }}
             >

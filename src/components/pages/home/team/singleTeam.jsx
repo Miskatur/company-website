@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const SingleTeam = ({ team, imageurl }) => {
   const { name, designation, image_path } = team;
@@ -14,12 +15,25 @@ const SingleTeam = ({ team, imageurl }) => {
     <>
       <div className="team-style-two">
         <div className="thumb">
-          <Image
+          {/* <Image
             src={`${imageurl}${image_path}`}
             alt="Image Not Found"
             width={300}
             height={370}
             style={{ color: "transparent" }}
+          /> */}
+          <LazyLoadImage
+            effect="blur"
+            className="idea-image img-fluid"
+            width={300}
+            height={370}
+            style={{
+              height: "100%",
+              width: "100%",
+              objectFit: "contain",
+            }}
+            alt="Team member image"
+            src={imagePath}
           />
           <div className="team-info">
             <div className="content">
