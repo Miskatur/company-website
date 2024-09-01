@@ -4,7 +4,7 @@ import ExpandableList from "./ExpandableList";
 
 const SolutionDetails = ({ slug, engagelist }) => {
   const [expandedIndex, setExpandedIndex] = useState(null);
-
+  console.log("slug", slug);
   useEffect(() => {
     if (slug) {
       const matchedIndex = engagelist?.findIndex(
@@ -43,6 +43,7 @@ const SolutionDetails = ({ slug, engagelist }) => {
               <div className="accordion pb-4" id="faqAccordion">
                 {engagelist?.map((faq, index) => {
                   const parsedDetails = JSON.parse(faq?.details);
+                  console.log("parsedDetails", parsedDetails);
                   return (
                     <ExpandableList
                       key={faq?.uid}

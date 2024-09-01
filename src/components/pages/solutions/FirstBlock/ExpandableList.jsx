@@ -3,6 +3,7 @@ import Image from "next/image";
 
 const ExpandableList = ({ faq, isExpanded, onExpand, nestedlist }) => {
   const { accordionId, title, text } = faq;
+  console.log("faq", faq);
 
   return (
     <div className="accordion-item ">
